@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Lin</title>
-<link>https://github.com/liamamilin/</link>
-<atom:link href="https://github.com/liamamilin/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://github.com/liamamilin/IBlogs/</link>
+<atom:link href="https://github.com/liamamilin/IBlogs/index.xml" rel="self" type="application/rss+xml"/>
 <description>Lin</description>
 <generator>quarto-1.9.36</generator>
 <lastBuildDate>Sat, 23 May 2026 16:00:00 GMT</lastBuildDate>
 <item>
   <title>世界生成能力：语言、想象与顶尖角色的底层路径</title>
   <dc:creator>Lin </dc:creator>
-  <link>https://github.com/liamamilin/posts/post-with-code/</link>
+  <link>https://github.com/liamamilin/IBlogs/posts/post-with-code/</link>
   <description><![CDATA[ 
 
 
@@ -476,9 +476,9 @@
   <category>语言</category>
   <category>学习</category>
   <category>思维</category>
-  <guid>https://github.com/liamamilin/posts/post-with-code/</guid>
+  <guid>https://github.com/liamamilin/IBlogs/posts/post-with-code/</guid>
   <pubDate>Sat, 23 May 2026 16:00:00 GMT</pubDate>
-  <media:content url="https://github.com/liamamilin/posts/post-with-code/image.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://github.com/liamamilin/IBlogs/posts/post-with-code/image.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
