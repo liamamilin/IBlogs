@@ -1,0 +1,11 @@
+{
+  "permission": {
+    "bash": {
+      "grep *": "allow",
+      "head *": "allow",
+      "cd *": "allow",
+      "quarto check *": "allow",
+      "tail *": "allow"
+    }
+  }
+}

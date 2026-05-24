@@ -1,0 +1,170 @@
+# Quarto Blog & Book 使用教程
+
+> 个人笔记，记录 Quarto Blog 和 Book 的基本使用方法与 GitHub Pages 部署流程。
+
+------------------------------------------------------------------------
+
+## 一、项目结构
+
+一个 Quarto Blog 项目的基本结构如下：
+
+```         
+Lin_Blog/
+├── _quarto.yml        # 全局配置文件
+├── index.qmd          # 首页（自动列出所有文章）
+├── about.qmd          # 关于页
+├── styles.css         # 自定义样式
+└── posts/
+    ├── _metadata.yml  # 所有文章共用的默认配置
+    ├── welcome/
+    │   └── index.qmd  # 第一篇文章
+    └── post-with-code/
+        └── index.qmd  # 第二篇文章
+```
+
+**关键规则：每篇文章对应一个独立文件夹。** 文件夹名会成为文章的 URL 路径，建议用英文小写加连字符，例如 `my-first-post`。
+
+------------------------------------------------------------------------
+
+## 二、创建新文章
+
+在 `posts/` 下新建一个文件夹，在里面创建 `index.qmd`。
+
+**文件夹结构示例：**
+
+```         
+posts/
+└── my-new-post/
+    ├── index.qmd       # 文章正文（必须）
+    ├── data.csv        # 相关数据（可选）
+    └── thumbnail.png   # 封面图（可选）
+```
+
+**`index.qmd` 的 YAML 头部模板：**
+
+``` yaml
+---
+title: "文章标题"
+author: "Lin"
+date: "2026-05-24"
+categories: [R, 数据分析]    # 用于分类筛选
+image: "thumbnail.png"       # 首页展示的封面图（可选）
+description: "简短描述"      # 首页摘要（可选）
+draft: true                  # 草稿模式，不会出现在首页
+---
+
+正文内容从这里开始...
+```
+
+> **草稿模式**：`draft: true` 时文章不会出现在首页，适合写到一半时使用。改成 `false` 或删掉这行才正式发布。
+
+------------------------------------------------------------------------
+
+## 三、渲染网站
+
+在 RStudio 点击 **Build → Render Website**，或在 Terminal 运行：
+
+``` bash
+quarto render
+```
+
+本地预览：
+
+``` bash
+quarto preview
+```
+
+`quarto preview` 会启动一个本地服务器，修改文件后自动刷新，方便调试。
+
+------------------------------------------------------------------------
+
+## 四、部署到 GitHub Pages
+
+### 第一次部署
+
+**步骤 1：** 在 GitHub 新建一个空仓库。
+
+**步骤 2：** 在 RStudio Terminal 把本地项目连接到 GitHub：
+
+``` bash
+git init
+git remote add origin https://github.com/你的用户名/仓库名.git
+git add .
+git commit -m "first commit"
+git push -u origin main
+```
+
+**步骤 3：** 运行发布命令：
+
+``` bash
+quarto publish gh-pages
+```
+
+这条命令会自动渲染网站，并把生成的文件推送到 `gh-pages` 分支，GitHub Pages 从该分支读取并展示网站。第一次运行会在浏览器弹出授权确认。
+
+### 后续更新
+
+每次写了新文章，运行以下命令：
+
+``` bash
+git add .
+git commit -m "新文章：xxx"
+git push                    # 保存源码到 main 分支
+quarto publish gh-pages     # 更新发布的网站
+```
+
+------------------------------------------------------------------------
+
+## 五、Quarto Book
+
+Book 适合写成章节结构的长篇内容，例如教程、书籍、技术文档。
+
+### `_quarto.yml` 配置
+
+``` yaml
+project:
+  type: book
+
+book:
+  title: "我的书"
+  author: "Lin"
+  chapters:
+    - index.qmd        # 前言
+    - intro.qmd        # 第一章
+    - analysis.qmd     # 第二章
+    - summary.qmd      # 总结
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: book  # 可选：同时输出 PDF
+```
+
+### Blog vs Book 对比
+
+|            | Blog              | Book                           |
+|------------|-------------------|--------------------------------|
+| 结构       | 时间线文章流      | 固定章节顺序                   |
+| 适合       | 笔记、分析日志    | 教程、系统性文档               |
+| 文章注册   | 自动扫描 `posts/` | 手动在 `_quarto.yml` 列出章节  |
+| 跨章节引用 | 不支持            | 支持（`@sec-xxx`、`@fig-xxx`） |
+
+### Book 部署到 GitHub Pages
+
+与 Blog 完全相同，同样使用：
+
+``` bash
+quarto publish gh-pages
+```
+
+------------------------------------------------------------------------
+
+## 六、常用命令速查
+
+| 命令                                           | 作用                 |
+|------------------------------------------------|----------------------|
+| `quarto render`                                | 渲染整个网站/书籍    |
+| `quarto preview`                               | 本地预览（自动刷新） |
+| `quarto publish gh-pages`                      | 发布到 GitHub Pages  |
+| `git add . && git commit -m "msg" && git push` | 保存源码到 GitHub    |
