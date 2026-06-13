@@ -13,5 +13,8 @@
   },
   "quarto-tutorial.qmd": {
     "quarto-tutorial.html": "344135ad"
+  },
+  "posts/LLM-Master/master.qmd": {
+    "master.html": "d717d506"
   }
 }
