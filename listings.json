@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/LLM-Master/master.html",
       "/posts/post-with-code/index.html"
     ]
   }
