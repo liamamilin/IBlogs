@@ -1,2 +1,696 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Lin">
+<meta name="dcterms.date" content="2026-06-13">
+
+<title>大模型下一阶段：不是只训练“知识”，而是训练“解决问题的方法论” – Lin</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">大模型下一阶段：不是只训练“知识”，而是训练“解决问题的方法论”</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">LLM</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Lin </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 13, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>过去讨论大模型时，人们最容易关注一个问题：模型知道多少？</p>
+<p>它是否知道更多事实，是否读过更多书，是否掌握更多代码库，是否覆盖更多语言、学科、行业知识。这个判断并没有错。大模型最初的能力确实来自大规模文本、代码、网页、论文、书籍和对话数据。它先通过世界知识建立基本语言能力、事实能力和推理基础。</p>
+<p>但今天的大模型竞争，已经不再只是“谁知道更多”。真正重要的问题正在变成：</p>
+<p><strong>模型是否知道高手如何解决问题。</strong></p>
+<p>也就是说，下一阶段的核心不只是训练知识，而是训练知识范式、工作范式、解决问题范式。</p>
+<section id="一知识只是材料方法论才决定能不能完成任务" class="level2">
+<h2 class="anchored" data-anchor-id="一知识只是材料方法论才决定能不能完成任务">一、知识只是材料，方法论才决定能不能完成任务</h2>
+<p>知识回答的是：</p>
+<p><strong>世界上有什么。</strong></p>
+<p>方法论回答的是：</p>
+<p><strong>面对一个具体问题，应该如何行动。</strong></p>
+<p>这两者差别很大。</p>
+<p>一个模型可能知道很多编程知识，但遇到真实项目时仍然乱改代码。因为真实工程任务不是一道孤立的算法题，而是包含目录结构、已有约束、接口依赖、历史设计、测试体系、团队风格和风险边界。</p>
+<p>一个模型可能知道很多商业概念，但面对一个具体公司问题时仍然只能罗列 SWOT、增长、成本、壁垒这些概念。因为真实商业分析需要识别关键变量，建立因果链，判断证据强弱，给出可执行方案。</p>
+<p>一个模型可能知道很多写作理论，但真正写文章时仍然松散、跳跃、空泛。因为写作不是堆概念，而是确定主题、安排论证、控制节奏、构造例子、完成表达。</p>
+<p>所以，大模型真正有价值的能力，不是“知道某个领域有哪些知识点”，而是：</p>
+<p><strong>它能不能像这个领域里的高手一样处理问题。</strong></p>
+</section>
+<section id="二高手能力的核心是一套稳定但可更新的动作结构" class="level2">
+<h2 class="anchored" data-anchor-id="二高手能力的核心是一套稳定但可更新的动作结构">二、高手能力的核心，是一套稳定但可更新的动作结构</h2>
+<p>所谓“解决问题的方法论”，不是抽象口号，而是一个领域中高手反复使用的动作结构。</p>
+<p>例如，优秀工程师修 bug，通常不是直接改代码，而是先复现问题，锁定触发条件，阅读相关调用链，提出假设，做最小修改，运行测试，再确认没有引入新问题。</p>
+<p>优秀架构师做技术方案，也不是直接给答案，而是先识别业务目标、系统边界、性能要求、团队能力、未来扩展，再比较不同方案的代价和风险。</p>
+<p>优秀研究者读论文，不是逐字翻译，而是先抓问题、方法、实验、贡献、局限，再判断论文能否迁移到自己的研究或工程中。</p>
+<p>优秀写作者写文章，不是堆素材，而是先确定中心判断，再建立论证路径，安排例子，控制信息密度，最后形成有推进感的表达。</p>
+<p>这些东西本质上不是普通知识，而是：</p>
+<p><strong>做事的顺序、判断的标准、修正的规则、验收的条件。</strong></p>
+<p>如果模型只是学习结果，它最多学到“答案长什么样”。如果模型学习过程，它才可能学到“答案是如何被产生出来的”。</p>
+<p>这就是从知识训练到方法论训练的关键转变。</p>
+</section>
+<section id="三claude-的强可能不只是模型强而是方法论系统强" class="level2">
+<h2 class="anchored" data-anchor-id="三claude-的强可能不只是模型强而是方法论系统强">三、Claude 的强，可能不只是模型强，而是方法论系统强</h2>
+<p>很多人会觉得 Claude 好用，尤其是在代码、写作、分析、项目理解和长任务协作中，它不像只是回答问题，而像是在陪用户推进任务。</p>
+<p>这种体验背后，很可能不只是参数规模或预训练语料的优势，而是一套更完整的问题解决系统。</p>
+<p>它可能包含几层东西：</p>
+<p>第一层是基础模型能力。模型需要有足够强的语言、代码、推理和上下文理解能力。</p>
+<p>第二层是行为范式。模型需要知道如何澄清目标、限定边界、拆解任务、寻找证据、控制风险、避免过度自信、逐步推进。</p>
+<p>第三层是产品工作流。比如代码工具、项目上下文、权限控制、文件编辑、命令执行、检查机制、长期会话、技能包和团队协作。</p>
+<p>第四层是评估系统。模型不能只看 benchmark 分数，还要看它在真实任务中是否能完成可交付结果，是否少犯错，是否遵守约束，是否能根据反馈修正。</p>
+<p>也就是说，Claude 的价值不是简单地“会说话”或“会写代码”，而是把一部分高质量的问题解决范式内化进模型，并通过产品工具链释放出来。</p>
+<p>这也是为什么单纯卖 token 很难支撑极高估值。token 只是计费单位，不是价值本体。真正有价值的是：</p>
+<p><strong>模型能否把知识工作变成可执行、可检查、可交付的结果。</strong></p>
+</section>
+<section id="四方法论可以逼近某一时刻的上限但没有永恒最优" class="level2">
+<h2 class="anchored" data-anchor-id="四方法论可以逼近某一时刻的上限但没有永恒最优">四、方法论可以逼近某一时刻的上限，但没有永恒最优</h2>
+<p>如果一家模型公司真的系统性收集各领域顶尖人群的方法论，再把这些方法论转化为训练数据、偏好数据、评估任务和产品工作流，那么理论上，它确实可以在某个时刻逼近当前人类生产力方法的上限。</p>
+<p>它可以学习：</p>
+<p>工程师如何调试复杂系统；研究员如何提出假设和验证假设；咨询顾问如何拆解商业问题；产品经理如何定义需求；律师如何做事实整理和风险判断；医生如何阅读病历和形成诊疗思路；写作者如何组织文章和表达观点。</p>
+<p>但这里有一个关键限制：</p>
+<p><strong>方法论不是永恒不变的。</strong></p>
+<p>工具会变，模型能力会变，工作环境会变，行业标准会变，用户需求也会变。</p>
+<p>在短上下文时代，好的方法论可能是分块、摘要、压缩、逐步读取。到了 1M 上下文时代，方法论就会变成全局输入、结构化检索、局部精读、跨文件验证。</p>
+<p>在普通代码补全时代，好的方法论是生成代码片段。到了 coding agent 时代，好的方法论变成理解项目、规划修改、执行命令、跑测试、根据反馈修正。</p>
+<p>在问答模型时代，好的 prompt 是“请一步一步思考”。到了工具调用和 agent 时代，关键变成目标定义、工具编排、上下文构造、验收标准和错误恢复。</p>
+<p>所以，真正强的不是某一套固定方法论，而是：</p>
+<p><strong>持续发现新任务、新失败模式、新工作流程，并不断更新方法论的能力。</strong></p>
+</section>
+<section id="五下一阶段模型公司的核心不是训练一次而是建立方法论更新系统" class="level2">
+<h2 class="anchored" data-anchor-id="五下一阶段模型公司的核心不是训练一次而是建立方法论更新系统">五、下一阶段模型公司的核心，不是训练一次，而是建立方法论更新系统</h2>
+<p>如果只是拥有一批专家方法论，那并不足以形成长期壁垒。因为方法论会扩散，竞争对手也会学习。</p>
+<p>真正有价值的是形成一个闭环：</p>
+<p>真实用户任务进入系统；模型在任务中暴露失败；失败案例被记录和分类；研究人员从失败中总结新的规则；规则被转化为训练数据、评估任务、产品提示、工具流程；模型和产品被更新；新版本继续进入真实任务。</p>
+<p>这个闭环一旦跑起来，模型公司就不只是训练模型，而是在训练“如何工作”。</p>
+<p>这也是大模型公司从聊天机器人走向 agent 平台的原因。聊天机器人只需要回答问题，agent 需要完成任务。完成任务就必须拥有任务方法论。</p>
+<p>因此，未来模型公司的竞争会从几个层面展开：</p>
+<p>谁能收集更多高质量专家任务；谁能拿到更多真实工作流数据；谁能更快发现模型失败模式；谁能把失败转化为训练和产品改进；谁能让模型稳定完成复杂长程任务；谁能在成本下降的同时保持可靠性。</p>
+<p>这已经不是单纯的知识竞争，而是方法论竞争。</p>
+</section>
+<section id="六国内大模型也正在转向这个方向" class="level2">
+<h2 class="anchored" data-anchor-id="六国内大模型也正在转向这个方向">六、国内大模型也正在转向这个方向</h2>
+<p>国内大模型过去主要卷几个方向：模型参数、中文能力、开源生态、价格、长上下文、多模态、代码 benchmark。</p>
+<p>但现在也明显开始进入下一阶段：Agent、coding、长程任务、工具调用、项目级理解、computer use、低成本推理。</p>
+<p>DeepSeek 的优势在于低成本和长上下文，适合成为大量 agent 任务的基础设施。Qwen 的优势在开源生态、云平台和真实世界 agent。Kimi 正在强调长程 coding、agent swarm 和多工具调用。MiniMax M3 强调 1M 上下文、多模态、coding agent 和 computer use。GLM 明确提出 agentic engineering，强调从 vibe coding 走向工程级 agent。字节、百度等大厂则更多从用户入口、搜索、内容、多模态和产业应用切入。</p>
+<p>这些路线表面不同，但本质上都在接近同一个方向：</p>
+<p><strong>让模型不只是知道答案，而是能够执行工作。</strong></p>
+<p>一旦模型要执行工作，就必然要学习工作范式。</p>
+</section>
+<section id="七真正的产品价值不是调用模型而是产品化某个领域的方法论" class="level2">
+<h2 class="anchored" data-anchor-id="七真正的产品价值不是调用模型而是产品化某个领域的方法论">七、真正的产品价值：不是调用模型，而是产品化某个领域的方法论</h2>
+<p>这个判断对 AI 产品尤其重要。</p>
+<p>如果一个产品只是包装模型 API，本质上就是 token 转售。token 会越来越便宜，模型会越来越多，用户会随时切换供应商。这样的产品很难形成长期价值。</p>
+<p>真正有价值的产品，是把某个领域的问题解决方法论沉淀下来。</p>
+<p>例如，项目理解 Agent 的价值不是“调用 DeepSeek 或 Claude 读代码”，而是建立一整套项目理解方法：</p>
+<p>如何读取项目入口；如何识别模块边界；如何追踪数据流和控制流；如何理解核心抽象；如何发现隐藏依赖；如何生成有证据的项目报告；如何让用户在学习过程中反馈问题；如何根据反馈修正报告和分析流程；如何评价一个模型的项目理解质量。</p>
+<p>当这些方法沉淀下来，模型只是执行载体。真正的产品资产，是这套方法论系统。</p>
+<p>所以，未来 AI 产品的竞争不是：</p>
+<p><strong>我用了哪个模型。</strong></p>
+<p>而是：</p>
+<p><strong>我把哪个领域的高手方法论产品化了。</strong></p>
+</section>
+<section id="八对个人和组织的启发方法论沉淀以后不一定需要顶尖模型" class="level2">
+<h2 class="anchored" data-anchor-id="八对个人和组织的启发方法论沉淀以后不一定需要顶尖模型">八、对个人和组织的启发：方法论沉淀以后，不一定需要顶尖模型</h2>
+<p>从“训练解决问题的方法论”这个角度看，日常使用大模型也会发生变化。</p>
+<p>很多人使用 AI 时，默认逻辑是：</p>
+<p><strong>遇到问题，直接找最强模型。</strong></p>
+<p>这个逻辑在方法论缺失时是合理的。因为用户不知道任务应该如何拆，不知道什么结果算好，不知道哪里容易出错，也不知道如何检查结果。这时，顶尖模型的价值在于补足用户缺失的判断能力。它不只是执行任务，也在替用户完成一部分任务定义、路径选择、风险控制和质量判断。</p>
+<p>但是，如果用户自己在某个领域已经有理解，情况就不同了。</p>
+<p>当用户知道这个领域的问题应该如何处理，知道任务应该如何拆解，知道什么是高质量结果，知道常见错误在哪里，知道如何验收和修正，那么顶尖模型就不是唯一选择。</p>
+<p>这时真正重要的不是模型本身，而是：</p>
+<p><strong>把自己的理解、范式、判断标准和工作流程沉淀下来，再嵌入到自己的工作系统中。</strong></p>
+<p>换句话说，当方法论清楚以后，模型承担的角色会发生变化。</p>
+<p>它不再需要充当“高级判断者”，而更像是：</p>
+<p>执行器、整理器、草稿生成器、批处理工具、初步审查器、格式化工具、上下文加工工具。</p>
+<p>在这种情况下，高性价比模型就可以完成大量工作。</p>
+<p>比如，一个人已经很清楚项目理解应该怎么做，那么他不一定需要每次都调用最贵的 Claude Opus。他可以先把项目理解方法写清楚：</p>
+<p>先读取项目结构；<br>
+再识别入口文件；<br>
+再分析核心模块；<br>
+再追踪数据流和控制流；<br>
+再识别配置、依赖、外部接口；<br>
+再生成带证据的模块报告；<br>
+再做一致性检查；<br>
+最后根据用户反馈修正报告。</p>
+<p>当这套流程被写成文档、prompt、模板、agent workflow 和验收规则以后，DeepSeek、Qwen、MiniMax、GLM 这类高性价比模型就可以执行其中的大部分步骤。</p>
+<p>这背后的原则是：</p>
+<p><strong>方法论外置以后，模型智能需求会下降。</strong></p>
+<p>顶尖模型之所以贵，是因为它内置了更多默认方法论。它在用户没有清晰范式时，能自动补上下文、补步骤、补判断、补风险控制。</p>
+<p>但如果这些东西已经由用户自己提供，模型就不需要从零构造方法。它只需要按照已经定义好的流程执行。这时，一个便宜但足够稳定的模型，往往就能产生很高的性价比。</p>
+<p>所以，大模型使用方式可以分成两种：</p>
+<p>第一种是买智能。<br>
+用户没有清晰方法论，把问题交给最强模型，希望模型自己完成理解、拆解、判断和执行。</p>
+<p>第二种是编排智能。<br>
+用户先沉淀自己的领域理解，把它变成流程、模板、规则和检查标准，再让高性价比模型执行。</p>
+<p>前一种依赖模型上限。<br>
+后一种依赖人的方法论工程能力。</p>
+<p>这对个人和小团队尤其重要。</p>
+<p>大公司可以把专家方法论训练进模型权重。个人和小团队很难训练基础模型，但可以做另一件事：</p>
+<p><strong>把自己的方法论外置成可调用的工作系统。</strong></p>
+<p>这种外置方法论可以包括：</p>
+<p>任务分类；执行步骤；上下文组织方式；输出模板；判断标准；错误示例；验收规则；修正规则；反馈记录；模型路由策略。</p>
+<p>这些东西一旦沉淀下来，就会变成个人或组织真正的 AI 资产。</p>
+<p>prompt 只是表层形式。真正有价值的不是某一句提示词，而是提示词背后的领域理解和工作范式。</p>
+<p>因此，一个更现实的 AI 使用策略是：</p>
+<p>日常批量任务，用高性价比模型；<br>
+标准化流程任务，用沉淀好的 workflow；<br>
+高风险判断，用更强模型抽查；<br>
+方法论缺失时，用顶尖模型辅助探索；<br>
+方法论成熟后，逐步迁移到便宜模型执行。</p>
+<p>这也意味着，未来真正会用 AI 的人，不一定是最会购买昂贵模型的人，而是最会沉淀自己方法论的人。</p>
+<p>可以把这个原则概括为一句话：</p>
+<p><strong>模型补能力，方法论降成本。</strong></p>
+<p>当方法论缺失时，需要顶尖模型补判断。<br>
+当方法论清楚时，高性价比模型就可以成为强执行器。</p>
+<p>所以，对个人和组织来说，AI 时代的核心能力不是永远追逐最强模型，而是：</p>
+<p><strong>把自己的理解变成方法论，把方法论变成 workflow，把 workflow 交给模型执行，再用反馈不断修正系统。</strong></p>
+<p>这条路线比单纯依赖顶尖模型更现实，也更可持续。</p>
+</section>
+<section id="九结论大模型正在从知识机器走向方法论机器" class="level2">
+<h2 class="anchored" data-anchor-id="九结论大模型正在从知识机器走向方法论机器">九、结论：大模型正在从“知识机器”走向“方法论机器”</h2>
+<p>大模型第一阶段像百科全书，核心是知道更多。第二阶段像助手，核心是回答更好。第三阶段像 agent，核心是完成任务。而要完成任务，模型必须学习解决问题的方法论。</p>
+<p>知识仍然重要，但知识只是材料。真正决定生产力的是：如何定义问题，如何组织知识，如何选择工具，如何构造流程，如何检查结果，如何根据反馈修正。</p>
+<p>因此，下一阶段大模型竞争的核心可以概括为一句话：</p>
+<p><strong>不是只训练模型知道世界，而是训练模型像高手一样处理世界。</strong></p>
+<p>谁能更快收集、蒸馏、训练、评估、更新各领域的问题解决范式，谁就更可能在 agent 时代获得优势。</p>
+<p>而对创业者和产品构建者来说，最重要的启发是：</p>
+<p><strong>不要做模型的搬运工，要做方法论的产品化者。</strong></p>
+<p>模型会降价，token 会商品化，单纯调用 API 的价值会被压缩。但一个领域中真正有效的问题解决方法论，如果能被结构化、工具化、流程化、评估化，就会变成新的产品壁垒。</p>
+<p>对个人和小团队来说，同样如此。</p>
+<p>真正值得沉淀的不是某一次模型调用，而是自己在某个领域中反复使用的判断、流程、标准和修正规则。只要这些方法论被写下来、结构化、工具化，就可以和高性价比模型结合，形成低成本、高复用、可持续迭代的工作系统。</p>
+<p>未来的大模型公司和 AI 产品公司，真正要争夺的，不只是知识本身，而是人类解决问题的方式。</p>
+<p>未来真正会使用 AI 的个人和组织，也不是永远依赖最贵模型的人，而是能把自己的方法论沉淀下来，并让模型持续执行、反馈和迭代的人。</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/liamamilin\.github\.io\/IBlogs");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
