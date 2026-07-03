@@ -16,5 +16,11 @@
   },
   "posts/LLM-Master/master.qmd": {
     "master.html": "d717d506"
+  },
+  "posts/relation/index.qmd": {
+    "index.html": "ac1169e7"
+  },
+  "posts/why-language-matters/index.qmd": {
+    "index.html": "2a8cb236"
   }
 }
