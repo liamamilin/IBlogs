@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/why-language-matters/index.html",
       "/posts/relation/index.html",
       "/posts/welcome/index.html",
       "/posts/LLM-Master/master.html",
