@@ -1,0 +1,2382 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Lin">
+<meta name="dcterms.date" content="2026-07-15">
+
+<title>学习构造论——面向个人学习的完整工程体系 – Lin</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">学习构造论——面向个人学习的完整工程体系</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">学习</div>
+                <div class="quarto-category">认知</div>
+                <div class="quarto-category">方法论</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Lin </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 15, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#引言学习不是信息摄入而是认知系统建设" id="toc-引言学习不是信息摄入而是认知系统建设" class="nav-link active" data-scroll-target="#引言学习不是信息摄入而是认知系统建设"><span class="header-section-number">0.1</span> 引言：学习不是信息摄入，而是认知系统建设</a></li>
+  <li><a href="#一学习中的三个层次" id="toc-一学习中的三个层次" class="nav-link" data-scroll-target="#一学习中的三个层次"><span class="header-section-number">1</span> 一、学习中的三个层次</a>
+  <ul class="collapse">
+  <li><a href="#学习资产" id="toc-学习资产" class="nav-link" data-scroll-target="#学习资产"><span class="header-section-number">1.1</span> 1. 学习资产</a></li>
+  <li><a href="#学习过程" id="toc-学习过程" class="nav-link" data-scroll-target="#学习过程"><span class="header-section-number">1.2</span> 2. 学习过程</a></li>
+  <li><a href="#学习结果" id="toc-学习结果" class="nav-link" data-scroll-target="#学习结果"><span class="header-section-number">1.3</span> 3. 学习结果</a></li>
+  </ul></li>
+  <li><a href="#二学习的两类核心资产" id="toc-二学习的两类核心资产" class="nav-link" data-scroll-target="#二学习的两类核心资产"><span class="header-section-number">2</span> 二、学习的两类核心资产</a>
+  <ul class="collapse">
+  <li><a href="#认知容器" id="toc-认知容器" class="nav-link" data-scroll-target="#认知容器"><span class="header-section-number">2.1</span> 1. 认知容器</a></li>
+  <li><a href="#单元容器与容器系统" id="toc-单元容器与容器系统" class="nav-link" data-scroll-target="#单元容器与容器系统"><span class="header-section-number">2.2</span> 2. 单元容器与容器系统</a>
+  <ul class="collapse">
+  <li><a href="#单元容器" id="toc-单元容器" class="nav-link" data-scroll-target="#单元容器"><span class="header-section-number">2.2.1</span> 单元容器</a></li>
+  <li><a href="#容器系统" id="toc-容器系统" class="nav-link" data-scroll-target="#容器系统"><span class="header-section-number">2.2.2</span> 容器系统</a></li>
+  </ul></li>
+  <li><a href="#学习素材" id="toc-学习素材" class="nav-link" data-scroll-target="#学习素材"><span class="header-section-number">2.3</span> 3. 学习素材</a>
+  <ul class="collapse">
+  <li><a href="#外部学习素材" id="toc-外部学习素材" class="nav-link" data-scroll-target="#外部学习素材"><span class="header-section-number">2.3.1</span> 外部学习素材</a></li>
+  <li><a href="#内化素材" id="toc-内化素材" class="nav-link" data-scroll-target="#内化素材"><span class="header-section-number">2.3.2</span> 内化素材</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#三学习设计的上层约束" id="toc-三学习设计的上层约束" class="nav-link" data-scroll-target="#三学习设计的上层约束"><span class="header-section-number">3</span> 三、学习设计的上层约束</a>
+  <ul class="collapse">
+  <li><a href="#目标" id="toc-目标" class="nav-link" data-scroll-target="#目标"><span class="header-section-number">3.1</span> 1. 目标</a></li>
+  <li><a href="#使用场景" id="toc-使用场景" class="nav-link" data-scroll-target="#使用场景"><span class="header-section-number">3.2</span> 2. 使用场景</a></li>
+  <li><a href="#学习边界" id="toc-学习边界" class="nav-link" data-scroll-target="#学习边界"><span class="header-section-number">3.3</span> 3. 学习边界</a></li>
+  <li><a href="#资源约束" id="toc-资源约束" class="nav-link" data-scroll-target="#资源约束"><span class="header-section-number">3.4</span> 4. 资源约束</a></li>
+  <li><a href="#目标产物" id="toc-目标产物" class="nav-link" data-scroll-target="#目标产物"><span class="header-section-number">3.5</span> 5. 目标产物</a></li>
+  </ul></li>
+  <li><a href="#四认知容器系统的内部结构" id="toc-四认知容器系统的内部结构" class="nav-link" data-scroll-target="#四认知容器系统的内部结构"><span class="header-section-number">4</span> 四、认知容器系统的内部结构</a>
+  <ul class="collapse">
+  <li><a href="#核心对象" id="toc-核心对象" class="nav-link" data-scroll-target="#核心对象"><span class="header-section-number">4.1</span> 1. 核心对象</a></li>
+  <li><a href="#属性与维度" id="toc-属性与维度" class="nav-link" data-scroll-target="#属性与维度"><span class="header-section-number">4.2</span> 2. 属性与维度</a></li>
+  <li><a href="#对象关系" id="toc-对象关系" class="nav-link" data-scroll-target="#对象关系"><span class="header-section-number">4.3</span> 3. 对象关系</a></li>
+  <li><a href="#过程与机制" id="toc-过程与机制" class="nav-link" data-scroll-target="#过程与机制"><span class="header-section-number">4.4</span> 4. 过程与机制</a></li>
+  <li><a href="#操作与方法" id="toc-操作与方法" class="nav-link" data-scroll-target="#操作与方法"><span class="header-section-number">4.5</span> 5. 操作与方法</a></li>
+  <li><a href="#判断标准" id="toc-判断标准" class="nav-link" data-scroll-target="#判断标准"><span class="header-section-number">4.6</span> 6. 判断标准</a></li>
+  <li><a href="#调用线索" id="toc-调用线索" class="nav-link" data-scroll-target="#调用线索"><span class="header-section-number">4.7</span> 7. 调用线索</a></li>
+  </ul></li>
+  <li><a href="#五传统学习为什么经常低效" id="toc-五传统学习为什么经常低效" class="nav-link" data-scroll-target="#五传统学习为什么经常低效"><span class="header-section-number">5</span> 五、传统学习为什么经常低效</a></li>
+  <li><a href="#六容器与素材的三种进入顺序" id="toc-六容器与素材的三种进入顺序" class="nav-link" data-scroll-target="#六容器与素材的三种进入顺序"><span class="header-section-number">6</span> 六、容器与素材的三种进入顺序</a>
+  <ul class="collapse">
+  <li><a href="#容器先行" id="toc-容器先行" class="nav-link" data-scroll-target="#容器先行"><span class="header-section-number">6.1</span> 1. 容器先行</a></li>
+  <li><a href="#素材或问题先行" id="toc-素材或问题先行" class="nav-link" data-scroll-target="#素材或问题先行"><span class="header-section-number">6.2</span> 2. 素材或问题先行</a></li>
+  <li><a href="#容器素材螺旋" id="toc-容器素材螺旋" class="nav-link" data-scroll-target="#容器素材螺旋"><span class="header-section-number">6.3</span> 3. 容器—素材螺旋</a></li>
+  </ul></li>
+  <li><a href="#七素材如何真正进入认知系统" id="toc-七素材如何真正进入认知系统" class="nav-link" data-scroll-target="#七素材如何真正进入认知系统"><span class="header-section-number">7</span> 七、素材如何真正进入认知系统</a>
+  <ul class="collapse">
+  <li><a href="#选择" id="toc-选择" class="nav-link" data-scroll-target="#选择"><span class="header-section-number">7.1</span> 1. 选择</a></li>
+  <li><a href="#理解与编码" id="toc-理解与编码" class="nav-link" data-scroll-target="#理解与编码"><span class="header-section-number">7.2</span> 2. 理解与编码</a></li>
+  <li><a href="#归位" id="toc-归位" class="nav-link" data-scroll-target="#归位"><span class="header-section-number">7.3</span> 3. 归位</a></li>
+  <li><a href="#连接" id="toc-连接" class="nav-link" data-scroll-target="#连接"><span class="header-section-number">7.4</span> 4. 连接</a></li>
+  <li><a href="#检验" id="toc-检验" class="nav-link" data-scroll-target="#检验"><span class="header-section-number">7.5</span> 5. 检验</a></li>
+  <li><a href="#提取" id="toc-提取" class="nav-link" data-scroll-target="#提取"><span class="header-section-number">7.6</span> 6. 提取</a></li>
+  </ul></li>
+  <li><a href="#八素材系统的完整类型" id="toc-八素材系统的完整类型" class="nav-link" data-scroll-target="#八素材系统的完整类型"><span class="header-section-number">8</span> 八、素材系统的完整类型</a>
+  <ul class="collapse">
+  <li><a href="#定义素材" id="toc-定义素材" class="nav-link" data-scroll-target="#定义素材"><span class="header-section-number">8.1</span> 1. 定义素材</a></li>
+  <li><a href="#典型案例" id="toc-典型案例" class="nav-link" data-scroll-target="#典型案例"><span class="header-section-number">8.2</span> 2. 典型案例</a></li>
+  <li><a href="#对比案例" id="toc-对比案例" class="nav-link" data-scroll-target="#对比案例"><span class="header-section-number">8.3</span> 3. 对比案例</a></li>
+  <li><a href="#反例" id="toc-反例" class="nav-link" data-scroll-target="#反例"><span class="header-section-number">8.4</span> 4. 反例</a></li>
+  <li><a href="#边缘案例" id="toc-边缘案例" class="nav-link" data-scroll-target="#边缘案例"><span class="header-section-number">8.5</span> 5. 边缘案例</a></li>
+  <li><a href="#过程素材" id="toc-过程素材" class="nav-link" data-scroll-target="#过程素材"><span class="header-section-number">8.6</span> 6. 过程素材</a></li>
+  <li><a href="#失败素材" id="toc-失败素材" class="nav-link" data-scroll-target="#失败素材"><span class="header-section-number">8.7</span> 7. 失败素材</a></li>
+  <li><a href="#实践素材" id="toc-实践素材" class="nav-link" data-scroll-target="#实践素材"><span class="header-section-number">8.8</span> 8. 实践素材</a></li>
+  </ul></li>
+  <li><a href="#九素材质量控制" id="toc-九素材质量控制" class="nav-link" data-scroll-target="#九素材质量控制"><span class="header-section-number">9</span> 九、素材质量控制</a>
+  <ul class="collapse">
+  <li><a href="#相关性" id="toc-相关性" class="nav-link" data-scroll-target="#相关性"><span class="header-section-number">9.1</span> 1. 相关性</a></li>
+  <li><a href="#代表性" id="toc-代表性" class="nav-link" data-scroll-target="#代表性"><span class="header-section-number">9.2</span> 2. 代表性</a></li>
+  <li><a href="#可靠性" id="toc-可靠性" class="nav-link" data-scroll-target="#可靠性"><span class="header-section-number">9.3</span> 3. 可靠性</a></li>
+  <li><a href="#可调用性" id="toc-可调用性" class="nav-link" data-scroll-target="#可调用性"><span class="header-section-number">9.4</span> 4. 可调用性</a></li>
+  </ul></li>
+  <li><a href="#十容器与素材如何共同演化" id="toc-十容器与素材如何共同演化" class="nav-link" data-scroll-target="#十容器与素材如何共同演化"><span class="header-section-number">10</span> 十、容器与素材如何共同演化</a>
+  <ul class="collapse">
+  <li><a href="#增添" id="toc-增添" class="nav-link" data-scroll-target="#增添"><span class="header-section-number">10.1</span> 1. 增添</a></li>
+  <li><a href="#调节" id="toc-调节" class="nav-link" data-scroll-target="#调节"><span class="header-section-number">10.2</span> 2. 调节</a></li>
+  <li><a href="#重构" id="toc-重构" class="nav-link" data-scroll-target="#重构"><span class="header-section-number">10.3</span> 3. 重构</a></li>
+  </ul></li>
+  <li><a href="#十一调用是学习质量的核心检验" id="toc-十一调用是学习质量的核心检验" class="nav-link" data-scroll-target="#十一调用是学习质量的核心检验"><span class="header-section-number">11</span> 十一、调用是学习质量的核心检验</a></li>
+  <li><a href="#十二反馈是防止认知系统封闭的机制" id="toc-十二反馈是防止认知系统封闭的机制" class="nav-link" data-scroll-target="#十二反馈是防止认知系统封闭的机制"><span class="header-section-number">12</span> 十二、反馈是防止认知系统封闭的机制</a></li>
+  <li><a href="#十三个人学习工程的标准流程" id="toc-十三个人学习工程的标准流程" class="nav-link" data-scroll-target="#十三个人学习工程的标准流程"><span class="header-section-number">13</span> 十三、个人学习工程的标准流程</a>
+  <ul class="collapse">
+  <li><a href="#阶段零诊断当前状态" id="toc-阶段零诊断当前状态" class="nav-link" data-scroll-target="#阶段零诊断当前状态"><span class="header-section-number">13.1</span> 阶段零：诊断当前状态</a></li>
+  <li><a href="#阶段一定义目标产物" id="toc-阶段一定义目标产物" class="nav-link" data-scroll-target="#阶段一定义目标产物"><span class="header-section-number">13.2</span> 阶段一：定义目标产物</a></li>
+  <li><a href="#阶段二设定边界与资源" id="toc-阶段二设定边界与资源" class="nav-link" data-scroll-target="#阶段二设定边界与资源"><span class="header-section-number">13.3</span> 阶段二：设定边界与资源</a></li>
+  <li><a href="#阶段三建立最低可用容器" id="toc-阶段三建立最低可用容器" class="nav-link" data-scroll-target="#阶段三建立最低可用容器"><span class="header-section-number">13.4</span> 阶段三：建立最低可用容器</a></li>
+  <li><a href="#阶段四建立素材需求表" id="toc-阶段四建立素材需求表" class="nav-link" data-scroll-target="#阶段四建立素材需求表"><span class="header-section-number">13.5</span> 阶段四：建立素材需求表</a></li>
+  <li><a href="#阶段五吸收代表性素材" id="toc-阶段五吸收代表性素材" class="nav-link" data-scroll-target="#阶段五吸收代表性素材"><span class="header-section-number">13.6</span> 阶段五：吸收代表性素材</a></li>
+  <li><a href="#阶段六素材归位与连接" id="toc-阶段六素材归位与连接" class="nav-link" data-scroll-target="#阶段六素材归位与连接"><span class="header-section-number">13.7</span> 阶段六：素材归位与连接</a></li>
+  <li><a href="#阶段七主动制造冲突" id="toc-阶段七主动制造冲突" class="nav-link" data-scroll-target="#阶段七主动制造冲突"><span class="header-section-number">13.8</span> 阶段七：主动制造冲突</a></li>
+  <li><a href="#阶段八调节或重构容器" id="toc-阶段八调节或重构容器" class="nav-link" data-scroll-target="#阶段八调节或重构容器"><span class="header-section-number">13.9</span> 阶段八：调节或重构容器</a></li>
+  <li><a href="#阶段九进行无提示调用" id="toc-阶段九进行无提示调用" class="nav-link" data-scroll-target="#阶段九进行无提示调用"><span class="header-section-number">13.10</span> 阶段九：进行无提示调用</a></li>
+  <li><a href="#阶段十反馈压缩与沉淀" id="toc-阶段十反馈压缩与沉淀" class="nav-link" data-scroll-target="#阶段十反馈压缩与沉淀"><span class="header-section-number">13.11</span> 阶段十：反馈、压缩与沉淀</a></li>
+  </ul></li>
+  <li><a href="#十四容器的版本管理" id="toc-十四容器的版本管理" class="nav-link" data-scroll-target="#十四容器的版本管理"><span class="header-section-number">14</span> 十四、容器的版本管理</a></li>
+  <li><a href="#十五如何判断一个容器是否高质量" id="toc-十五如何判断一个容器是否高质量" class="nav-link" data-scroll-target="#十五如何判断一个容器是否高质量"><span class="header-section-number">15</span> 十五、如何判断一个容器是否高质量</a>
+  <ul class="collapse">
+  <li><a href="#承接力" id="toc-承接力" class="nav-link" data-scroll-target="#承接力"><span class="header-section-number">15.1</span> 1. 承接力</a></li>
+  <li><a href="#区分力" id="toc-区分力" class="nav-link" data-scroll-target="#区分力"><span class="header-section-number">15.2</span> 2. 区分力</a></li>
+  <li><a href="#解释力" id="toc-解释力" class="nav-link" data-scroll-target="#解释力"><span class="header-section-number">15.3</span> 3. 解释力</a></li>
+  <li><a href="#压缩力" id="toc-压缩力" class="nav-link" data-scroll-target="#压缩力"><span class="header-section-number">15.4</span> 4. 压缩力</a></li>
+  <li><a href="#预测力" id="toc-预测力" class="nav-link" data-scroll-target="#预测力"><span class="header-section-number">15.5</span> 5. 预测力</a></li>
+  <li><a href="#操作力" id="toc-操作力" class="nav-link" data-scroll-target="#操作力"><span class="header-section-number">15.6</span> 6. 操作力</a></li>
+  <li><a href="#迁移力" id="toc-迁移力" class="nav-link" data-scroll-target="#迁移力"><span class="header-section-number">15.7</span> 7. 迁移力</a></li>
+  <li><a href="#可修正性" id="toc-可修正性" class="nav-link" data-scroll-target="#可修正性"><span class="header-section-number">15.8</span> 8. 可修正性</a></li>
+  <li><a href="#调用效率" id="toc-调用效率" class="nav-link" data-scroll-target="#调用效率"><span class="header-section-number">15.9</span> 9. 调用效率</a></li>
+  </ul></li>
+  <li><a href="#十六个人学习中的常见系统故障" id="toc-十六个人学习中的常见系统故障" class="nav-link" data-scroll-target="#十六个人学习中的常见系统故障"><span class="header-section-number">16</span> 十六、个人学习中的常见系统故障</a>
+  <ul class="collapse">
+  <li><a href="#只有素材没有容器" id="toc-只有素材没有容器" class="nav-link" data-scroll-target="#只有素材没有容器"><span class="header-section-number">16.1</span> 1. 只有素材，没有容器</a></li>
+  <li><a href="#只有容器没有素材" id="toc-只有容器没有素材" class="nav-link" data-scroll-target="#只有容器没有素材"><span class="header-section-number">16.2</span> 2. 只有容器，没有素材</a></li>
+  <li><a href="#初始容器过大" id="toc-初始容器过大" class="nav-link" data-scroll-target="#初始容器过大"><span class="header-section-number">16.3</span> 3. 初始容器过大</a></li>
+  <li><a href="#容器建立在错误定义上" id="toc-容器建立在错误定义上" class="nav-link" data-scroll-target="#容器建立在错误定义上"><span class="header-section-number">16.4</span> 4. 容器建立在错误定义上</a></li>
+  <li><a href="#容器过于僵硬" id="toc-容器过于僵硬" class="nav-link" data-scroll-target="#容器过于僵硬"><span class="header-section-number">16.5</span> 5. 容器过于僵硬</a></li>
+  <li><a href="#使用借来的容器" id="toc-使用借来的容器" class="nav-link" data-scroll-target="#使用借来的容器"><span class="header-section-number">16.6</span> 6. 使用借来的容器</a></li>
+  <li><a href="#把熟悉误认为掌握" id="toc-把熟悉误认为掌握" class="nav-link" data-scroll-target="#把熟悉误认为掌握"><span class="header-section-number">16.7</span> 7. 把熟悉误认为掌握</a></li>
+  <li><a href="#沉迷整理而不进入现实" id="toc-沉迷整理而不进入现实" class="nav-link" data-scroll-target="#沉迷整理而不进入现实"><span class="header-section-number">16.8</span> 8. 沉迷整理而不进入现实</a></li>
+  <li><a href="#无限学习没有停止条件" id="toc-无限学习没有停止条件" class="nav-link" data-scroll-target="#无限学习没有停止条件"><span class="header-section-number">16.9</span> 9. 无限学习，没有停止条件</a></li>
+  </ul></li>
+  <li><a href="#十七大模型时代的学习构造" id="toc-十七大模型时代的学习构造" class="nav-link" data-scroll-target="#十七大模型时代的学习构造"><span class="header-section-number">17</span> 十七、大模型时代的学习构造</a>
+  <ul class="collapse">
+  <li><a href="#容器生成器" id="toc-容器生成器" class="nav-link" data-scroll-target="#容器生成器"><span class="header-section-number">17.1</span> 1. 容器生成器</a></li>
+  <li><a href="#素材筛选器" id="toc-素材筛选器" class="nav-link" data-scroll-target="#素材筛选器"><span class="header-section-number">17.2</span> 2. 素材筛选器</a></li>
+  <li><a href="#结构审查器" id="toc-结构审查器" class="nav-link" data-scroll-target="#结构审查器"><span class="header-section-number">17.3</span> 3. 结构审查器</a></li>
+  <li><a href="#反例生成器" id="toc-反例生成器" class="nav-link" data-scroll-target="#反例生成器"><span class="header-section-number">17.4</span> 4. 反例生成器</a></li>
+  <li><a href="#调用训练器" id="toc-调用训练器" class="nav-link" data-scroll-target="#调用训练器"><span class="header-section-number">17.5</span> 5. 调用训练器</a></li>
+  <li><a href="#版本编辑器" id="toc-版本编辑器" class="nav-link" data-scroll-target="#版本编辑器"><span class="header-section-number">17.6</span> 6. 版本编辑器</a></li>
+  <li><a href="#大模型不能替代什么" id="toc-大模型不能替代什么" class="nav-link" data-scroll-target="#大模型不能替代什么"><span class="header-section-number">17.7</span> 7. 大模型不能替代什么</a></li>
+  </ul></li>
+  <li><a href="#十八完整运行模型" id="toc-十八完整运行模型" class="nav-link" data-scroll-target="#十八完整运行模型"><span class="header-section-number">18</span> 十八、完整运行模型</a>
+  <ul class="collapse">
+  <li><a href="#设计约束" id="toc-设计约束" class="nav-link" data-scroll-target="#设计约束"><span class="header-section-number">18.1</span> 1. 设计约束</a></li>
+  <li><a href="#两类核心资产" id="toc-两类核心资产" class="nav-link" data-scroll-target="#两类核心资产"><span class="header-section-number">18.2</span> 2. 两类核心资产</a></li>
+  <li><a href="#学习任务" id="toc-学习任务" class="nav-link" data-scroll-target="#学习任务"><span class="header-section-number">18.3</span> 3. 学习任务</a></li>
+  <li><a href="#输出" id="toc-输出" class="nav-link" data-scroll-target="#输出"><span class="header-section-number">18.4</span> 4. 输出</a></li>
+  <li><a href="#反馈" id="toc-反馈" class="nav-link" data-scroll-target="#反馈"><span class="header-section-number">18.5</span> 5. 反馈</a></li>
+  <li><a href="#更新" id="toc-更新" class="nav-link" data-scroll-target="#更新"><span class="header-section-number">18.6</span> 6. 更新</a></li>
+  </ul></li>
+  <li><a href="#十九学习工程应沉淀的长期资产" id="toc-十九学习工程应沉淀的长期资产" class="nav-link" data-scroll-target="#十九学习工程应沉淀的长期资产"><span class="header-section-number">19</span> 十九、学习工程应沉淀的长期资产</a>
+  <ul class="collapse">
+  <li><a href="#容器地图" id="toc-容器地图" class="nav-link" data-scroll-target="#容器地图"><span class="header-section-number">19.1</span> 1. 容器地图</a></li>
+  <li><a href="#核心定义库" id="toc-核心定义库" class="nav-link" data-scroll-target="#核心定义库"><span class="header-section-number">19.2</span> 2. 核心定义库</a></li>
+  <li><a href="#代表性素材库" id="toc-代表性素材库" class="nav-link" data-scroll-target="#代表性素材库"><span class="header-section-number">19.3</span> 3. 代表性素材库</a></li>
+  <li><a href="#机制模型" id="toc-机制模型" class="nav-link" data-scroll-target="#机制模型"><span class="header-section-number">19.4</span> 4. 机制模型</a></li>
+  <li><a href="#操作流程" id="toc-操作流程" class="nav-link" data-scroll-target="#操作流程"><span class="header-section-number">19.5</span> 5. 操作流程</a></li>
+  <li><a href="#判断标准-1" id="toc-判断标准-1" class="nav-link" data-scroll-target="#判断标准-1"><span class="header-section-number">19.6</span> 6. 判断标准</a></li>
+  <li><a href="#调用任务集" id="toc-调用任务集" class="nav-link" data-scroll-target="#调用任务集"><span class="header-section-number">19.7</span> 7. 调用任务集</a></li>
+  <li><a href="#版本记录" id="toc-版本记录" class="nav-link" data-scroll-target="#版本记录"><span class="header-section-number">19.8</span> 8. 版本记录</a></li>
+  </ul></li>
+  <li><a href="#结语从信息消费者转向认知系统建造者" id="toc-结语从信息消费者转向认知系统建造者" class="nav-link" data-scroll-target="#结语从信息消费者转向认知系统建造者"><span class="header-section-number">20</span> 结语：从信息消费者转向认知系统建造者</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="引言学习不是信息摄入而是认知系统建设" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="引言学习不是信息摄入而是认知系统建设"><span class="header-section-number">0.1</span> 引言：学习不是信息摄入，而是认知系统建设</h2>
+<p>人们通常把学习理解为一种信息摄入活动：</p>
+<p>读书、听课、查资料、看视频、记笔记、背概念。</p>
+<p>按照这种理解，只要接触的信息足够多、投入的时间足够长，知识就会逐渐积累，最终形成理解和能力。</p>
+<p>但真实的学习经常不是这样。</p>
+<p>一个人可能看过大量资料，却依然：</p>
+<ul>
+<li>无法说清一个领域究竟包含什么；</li>
+<li>不知道不同概念之间是什么关系；</li>
+<li>遇到具体问题时不知道调用哪部分知识；</li>
+<li>能理解别人的解释，却无法独立解释；</li>
+<li>能复述理论，却不能据此判断和行动；</li>
+<li>学过的内容彼此孤立，过一段时间便迅速消失。</li>
+</ul>
+<p>问题不一定在于素材太少，而可能在于这些素材没有进入一个稳定、清晰、可调用的认知结构。</p>
+<p>因此，学习不能只被理解为”获得更多信息”。</p>
+<p>更准确地说：</p>
+<blockquote class="blockquote">
+<p><strong>学习是围绕个人目标，对认知系统进行持续建设、运行、检验和更新的过程。</strong></p>
+</blockquote>
+<p>在这个过程中，会逐渐形成两类核心认知资产：</p>
+<p><span class="math display">\[
+\boxed{
+\begin{aligned}
+&amp;\text{学习资产} \\
+&amp;\quad = \text{认知容器} + \text{内化素材}
+\end{aligned}
+}
+\]</span></p>
+<p>认知容器负责选择、承接、组织、解释和调用知识。</p>
+<p>内化素材负责填充、检验、修正和扩展认知容器。</p>
+<p>容器没有素材，会成为空洞的框架。</p>
+<p>素材没有容器，会成为难以组织和调用的碎片。</p>
+<p>真正有效的学习，是二者之间持续发生的循环：</p>
+<blockquote class="blockquote">
+<p><strong>以容器聚合素材，以素材重构容器。</strong></p>
+</blockquote>
+<p>这构成了个人学习工程的基础。</p>
+<p>需要说明的是，本文主要讨论个人围绕某一主题进行的系统性学习，尤其适用于：</p>
+<ul>
+<li>概念与知识学习；</li>
+<li>分析与判断能力；</li>
+<li>专业技能；</li>
+<li>表达与创作能力；</li>
+<li>复杂问题解决；</li>
+<li>可以被结构化、练习和检验的学习任务。</li>
+</ul>
+<p>身体技能、情绪习惯、社会互动和审美浸润也可以部分纳入这一体系，但还需要额外考虑身体训练、情境条件、长期反馈和自动化形成。</p>
+<hr>
+</section>
+<section id="一学习中的三个层次" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 一、学习中的三个层次</h1>
+<p>在建立完整体系之前，首先需要区分三个容易混淆的层次。</p>
+<section id="学习资产" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="学习资产"><span class="header-section-number">1.1</span> 1. 学习资产</h2>
+<p>学习之后，个人认知系统中积累下来的内容，包括：</p>
+<ul>
+<li>认知容器；</li>
+<li>已内化素材；</li>
+<li>对象之间的连接；</li>
+<li>解释机制；</li>
+<li>操作程序；</li>
+<li>判断标准；</li>
+<li>调用线索。</li>
+</ul>
+<p>它回答的是：</p>
+<blockquote class="blockquote">
+<p>学习系统中已经具有什么。</p>
+</blockquote>
+<hr>
+</section>
+<section id="学习过程" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="学习过程"><span class="header-section-number">1.2</span> 2. 学习过程</h2>
+<p>学习过程中执行的动作，包括：</p>
+<ul>
+<li>选择；</li>
+<li>理解；</li>
+<li>编码；</li>
+<li>归位；</li>
+<li>比较；</li>
+<li>连接；</li>
+<li>练习；</li>
+<li>调用；</li>
+<li>检验；</li>
+<li>修正；</li>
+<li>重构。</li>
+</ul>
+<p>它回答的是：</p>
+<blockquote class="blockquote">
+<p>学习系统如何发生变化。</p>
+</blockquote>
+<hr>
+</section>
+<section id="学习结果" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="学习结果"><span class="header-section-number">1.3</span> 3. 学习结果</h2>
+<p>学习产生的最终变化，包括：</p>
+<ul>
+<li>知道得更多；</li>
+<li>理解得更深；</li>
+<li>结构更加准确；</li>
+<li>调用更加稳定；</li>
+<li>判断更加成熟；</li>
+<li>能够完成过去无法完成的任务；</li>
+<li>能够将知识迁移到新的情境。</li>
+</ul>
+<p>因此，不能简单地把学习本身等同于”容器加素材”。</p>
+<p>更准确的表达是：</p>
+<p><span class="math display">\[
+\boxed{\text{学习资产}=C+M}
+\]</span></p>
+<p>而：</p>
+<p><span class="math display">\[
+\boxed{\text{学习过程} = \text{对容器和素材进行持续建造、连接、检验与更新}}
+\]</span></p>
+<p>最终，学习结果表现为认知系统和行动能力发生了可验证的改变。</p>
+<hr>
+</section>
+</section>
+<section id="二学习的两类核心资产" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> 二、学习的两类核心资产</h1>
+<section id="认知容器" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="认知容器"><span class="header-section-number">2.1</span> 1. 认知容器</h2>
+<p>认知容器，是学习者围绕某个主题建立的知识组织与处理结构。</p>
+<p>它不是简单的目录，也不是对知识进行分类的几个标签。</p>
+<p>一个真正有效的认知容器，会规定：</p>
+<ul>
+<li>这个领域中存在什么；</li>
+<li>每个对象可以从哪些方面观察；</li>
+<li>对象之间如何连接；</li>
+<li>系统如何运行和变化；</li>
+<li>面对它可以执行什么操作；</li>
+<li>如何判断解释、方法和结果是否合理；</li>
+<li>在具体任务中，应该调用哪些知识。</li>
+</ul>
+<p>因此，容器不是被动等待填充的仓库。</p>
+<p>它同时承担多种功能：</p>
+<ul>
+<li><strong>选择器</strong>：决定什么信息值得关注；</li>
+<li><strong>分类器</strong>：判断素材属于什么；</li>
+<li><strong>解释器</strong>：说明现象为什么发生；</li>
+<li><strong>索引器</strong>：帮助快速寻找相关知识；</li>
+<li><strong>压缩器</strong>：用少量结构组织大量案例；</li>
+<li><strong>预测器</strong>：根据条件推断可能结果；</li>
+<li><strong>操作界面</strong>：指导判断、行动和创造。</li>
+</ul>
+<p>例如，学习电影并不等于记住”镜头、剪辑、声音、表演”等术语。</p>
+<p>一个有效的电影分析容器系统，还需要帮助学习者理解：</p>
+<ul>
+<li>画面中出现了哪些对象；</li>
+<li>摄影机从什么位置观看它们；</li>
+<li>空间如何被组织；</li>
+<li>时间如何被压缩、延长或打乱；</li>
+<li>信息如何被给予、延迟和隐藏；</li>
+<li>人物状态如何通过动作、表情和构图呈现；</li>
+<li>声音如何制造节奏、情绪和意义；</li>
+<li>一个镜头在整场戏中承担什么功能；</li>
+<li>观众的注意力和预期如何被引导。</li>
+</ul>
+<p>有了这些容器，电影中的具体画面才不再只是稍纵即逝的感受，而能够被识别、命名、比较、解释和调用。</p>
+<hr>
+</section>
+<section id="单元容器与容器系统" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="单元容器与容器系统"><span class="header-section-number">2.2</span> 2. 单元容器与容器系统</h2>
+<p>“容器”可以存在于不同尺度。</p>
+<section id="单元容器" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="单元容器"><span class="header-section-number">2.2.1</span> 单元容器</h3>
+<p>单元容器承接某一类相对局部的素材。</p>
+<p>例如小说学习中的：</p>
+<ul>
+<li>人物；</li>
+<li>行为；</li>
+<li>冲突；</li>
+<li>场景；</li>
+<li>时间；</li>
+<li>视角；</li>
+<li>信息。</li>
+</ul>
+<p>每一个都可以被视为一个单元容器。</p>
+</section>
+<section id="容器系统" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="容器系统"><span class="header-section-number">2.2.2</span> 容器系统</h3>
+<p>容器系统由多个单元容器及其关系共同组成。</p>
+<p>例如：</p>
+<p><span class="math display">\[
+\text{人物} \rightarrow \text{目标} \rightarrow \text{阻碍} \rightarrow \text{行为} \rightarrow \text{结果} \rightarrow \text{人物变化}
+\]</span></p>
+<p>单独知道”人物”“目标”“行为”并不等于理解叙事。</p>
+<p>只有当这些容器之间建立了稳定关系，才形成完整认知结构。</p>
+<p>因此，讨论一个完整主题时，更准确的说法是：</p>
+<blockquote class="blockquote">
+<p><strong>认知容器系统。</strong></p>
+</blockquote>
+<p>为了表达简洁，后文仍可简称为”容器”。</p>
+<hr>
+</section>
+</section>
+<section id="学习素材" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="学习素材"><span class="header-section-number">2.3</span> 3. 学习素材</h2>
+<p>学习素材，是个人在学习过程中接触到的信息、案例、经验和反馈。</p>
+<p>它可以包括：</p>
+<ul>
+<li>术语与定义；</li>
+<li>事实与数据；</li>
+<li>理论与观点；</li>
+<li>典型案例；</li>
+<li>对比案例；</li>
+<li>反例；</li>
+<li>边缘案例；</li>
+<li>操作步骤；</li>
+<li>方法和工具；</li>
+<li>失败经验；</li>
+<li>真实情境；</li>
+<li>个人观察；</li>
+<li>练习任务；</li>
+<li>外部反馈。</li>
+</ul>
+<p>但学习素材不等于个人已经拥有的知识。</p>
+<p>一段文字、一条观点、一个案例，即使被收藏、摘录或整理进笔记，也未必已经进入个人认知系统。</p>
+<p>因此，需要区分两种状态。</p>
+<section id="外部学习素材" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="外部学习素材"><span class="header-section-number">2.3.1</span> 外部学习素材</h3>
+<p>尚未被个人充分理解和调用的信息。</p>
+</section>
+<section id="内化素材" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="内化素材"><span class="header-section-number">2.3.2</span> 内化素材</h3>
+<p>已经被个人完成理解、编码、归位、连接和提取的内容。</p>
+<p>其转化过程可以表示为：</p>
+<p><span class="math display">\[
+M_{\text{外部}} \rightarrow \text{选择} \rightarrow \text{理解与编码} \rightarrow \text{归位} \rightarrow \text{连接} \rightarrow \text{提取} \rightarrow M_{\text{内化}}
+\]</span></p>
+<p>只有完成这一过程，素材才真正成为个人知识的一部分。</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="三学习设计的上层约束" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 三、学习设计的上层约束</h1>
+<p>认知容器并不是凭空制造的。</p>
+<p>在制造容器之前，还存在一层更高的设计约束。</p>
+<p>它决定：</p>
+<ul>
+<li>为什么学习；</li>
+<li>学习什么；</li>
+<li>学到什么程度；</li>
+<li>使用哪些资源；</li>
+<li>最终要产出什么。</li>
+</ul>
+<p>这层结构可以表示为：</p>
+<p><span class="math display">\[
+G = \{\text{目标、场景、边界、资源、产物}\}
+\]</span></p>
+<hr>
+<section id="目标" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="目标"><span class="header-section-number">3.1</span> 1. 目标</h2>
+<p>首先明确，学习最终要服务什么。</p>
+<p>同一个主题，可以对应完全不同的学习目标。</p>
+<p>例如学习英语，可以用于：</p>
+<ul>
+<li>日常交流；</li>
+<li>阅读专业资料；</li>
+<li>参加考试；</li>
+<li>工作沟通；</li>
+<li>文学欣赏；</li>
+<li>长期生活；</li>
+<li>写作与创作。</li>
+</ul>
+<p>目标不同，所需容器、素材和训练方式都会不同。</p>
+<p>因此，学习的起点不应只是：</p>
+<blockquote class="blockquote">
+<p>这个领域有哪些知识？</p>
+</blockquote>
+<p>而应当是：</p>
+<blockquote class="blockquote">
+<p>学会之后，个人需要能够完成什么？</p>
+</blockquote>
+<hr>
+</section>
+<section id="使用场景" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="使用场景"><span class="header-section-number">3.2</span> 2. 使用场景</h2>
+<p>知识最终会在什么情境中被调用。</p>
+<p>例如同样是学习编程：</p>
+<ul>
+<li>为了通过考试；</li>
+<li>为了阅读代码；</li>
+<li>为了独立开发项目；</li>
+<li>为了求职；</li>
+<li>为了使用大模型完成工程任务。</li>
+</ul>
+<p>这些场景需要不同的知识结构和训练重点。</p>
+<hr>
+</section>
+<section id="学习边界" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="学习边界"><span class="header-section-number">3.3</span> 3. 学习边界</h2>
+<p>确定当前阶段处理什么，不处理什么。</p>
+<p>边界可以防止学习无限扩张。</p>
+<p>例如学习电影拉片，基础阶段可以聚焦：</p>
+<ul>
+<li>画面；</li>
+<li>镜头；</li>
+<li>构图；</li>
+<li>剪辑；</li>
+<li>声音；</li>
+<li>表演；</li>
+<li>叙事功能。</li>
+</ul>
+<p>而不立即进入：</p>
+<ul>
+<li>完整电影史；</li>
+<li>产业制度；</li>
+<li>发行机制；</li>
+<li>明星研究；</li>
+<li>所有理论流派。</li>
+</ul>
+<p>边界不是永久排除，而是为当前阶段建立有效范围。</p>
+<hr>
+</section>
+<section id="资源约束" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="资源约束"><span class="header-section-number">3.4</span> 4. 资源约束</h2>
+<p>个人学习永远处在有限条件下。</p>
+<p>需要考虑：</p>
+<ul>
+<li>可投入时间；</li>
+<li>注意力；</li>
+<li>经济成本；</li>
+<li>材料获取难度；</li>
+<li>目标紧迫程度；</li>
+<li>当前生活负担；</li>
+<li>已有知识基础。</li>
+</ul>
+<p>因此，个人学习工程不追求抽象意义上的领域完整，而追求：</p>
+<blockquote class="blockquote">
+<p><strong>在个人目标与资源约束下的充分有效。</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="目标产物" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="目标产物"><span class="header-section-number">3.5</span> 5. 目标产物</h2>
+<p>目标必须转化为可检查的结果。</p>
+<p>例如：</p>
+<p>“学习电影”过于宽泛。</p>
+<p>可以改成：</p>
+<ul>
+<li>能够对一个三分钟片段进行逐镜头分析；</li>
+<li>能够准确描述构图、景别、机位、运动和剪辑；</li>
+<li>能够解释镜头如何影响人物、信息和情绪；</li>
+<li>能够将分析结果迁移到小说场景或游戏画面设计中。</li>
+</ul>
+<p>目标产物决定整个学习系统的方向。</p>
+<hr>
+</section>
+</section>
+<section id="四认知容器系统的内部结构" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 四、认知容器系统的内部结构</h1>
+<p>一个成熟的认知容器系统至少包含七个部分。</p>
+<hr>
+<section id="核心对象" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="核心对象"><span class="header-section-number">4.1</span> 1. 核心对象</h2>
+<p>核心对象，是领域中稳定存在、反复出现的基本单位。</p>
+<p>例如小说领域可能包括：</p>
+<ul>
+<li>人物；</li>
+<li>行为；</li>
+<li>事件；</li>
+<li>场景；</li>
+<li>时间；</li>
+<li>空间；</li>
+<li>信息；</li>
+<li>冲突；</li>
+<li>关系；</li>
+<li>叙述者；</li>
+<li>读者。</li>
+</ul>
+<p>对象是认知结构中的基本承载单位。</p>
+<p>没有对象，知识只能停留在模糊描述中。</p>
+<hr>
+</section>
+<section id="属性与维度" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="属性与维度"><span class="header-section-number">4.2</span> 2. 属性与维度</h2>
+<p>同一个对象可以从不同方面进行观察。</p>
+<p>例如人物可以具有：</p>
+<ul>
+<li>身份；</li>
+<li>目标；</li>
+<li>欲望；</li>
+<li>恐惧；</li>
+<li>能力；</li>
+<li>性格；</li>
+<li>情绪；</li>
+<li>立场；</li>
+<li>关系；</li>
+<li>状态；</li>
+<li>变化。</li>
+</ul>
+<p>维度使观察从：</p>
+<blockquote class="blockquote">
+<p>看到了一个人物。</p>
+</blockquote>
+<p>升级为：</p>
+<blockquote class="blockquote">
+<p>知道应该从哪些方面理解这个人物。</p>
+</blockquote>
+<hr>
+</section>
+<section id="对象关系" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="对象关系"><span class="header-section-number">4.3</span> 3. 对象关系</h2>
+<p>真正的结构不只是对象的集合，更重要的是对象之间的连接。</p>
+<p>常见关系包括：</p>
+<ul>
+<li>因果关系；</li>
+<li>组成关系；</li>
+<li>从属关系；</li>
+<li>对立关系；</li>
+<li>相似关系；</li>
+<li>时间关系；</li>
+<li>空间关系；</li>
+<li>条件关系；</li>
+<li>权力关系；</li>
+<li>信息关系；</li>
+<li>功能关系。</li>
+</ul>
+<p>例如：</p>
+<p><span class="math display">\[
+\text{人物追求目标} \rightarrow \text{遭遇阻碍} \rightarrow \text{产生冲突} \rightarrow \text{采取行动} \rightarrow \text{状态发生变化}
+\]</span></p>
+<p>关系使静态目录变成可解释的系统。</p>
+<hr>
+</section>
+<section id="过程与机制" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="过程与机制"><span class="header-section-number">4.4</span> 4. 过程与机制</h2>
+<p>过程描述系统如何运行。</p>
+<p>机制解释变化为什么发生。</p>
+<p>一个成熟容器应当能够表示：</p>
+<p><span class="math display">\[
+\text{输入} \rightarrow \text{处理} \rightarrow \text{状态变化} \rightarrow \text{反馈} \rightarrow \text{结果}
+\]</span></p>
+<p>例如学习记忆，不应只列出：</p>
+<ul>
+<li>编码；</li>
+<li>存储；</li>
+<li>提取；</li>
+<li>遗忘。</li>
+</ul>
+<p>还需要理解：</p>
+<ul>
+<li>注意如何影响编码；</li>
+<li>结构如何影响压缩；</li>
+<li>提取如何强化记忆；</li>
+<li>干扰如何造成遗忘；</li>
+<li>情境如何影响调用。</li>
+</ul>
+<p>机制让知识具有解释和预测能力。</p>
+<hr>
+</section>
+<section id="操作与方法" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="操作与方法"><span class="header-section-number">4.5</span> 5. 操作与方法</h2>
+<p>学习最终必须转化为动作。</p>
+<p>一个领域中常见的认知操作包括：</p>
+<ul>
+<li>识别；</li>
+<li>命名；</li>
+<li>分类；</li>
+<li>分解；</li>
+<li>比较；</li>
+<li>连接；</li>
+<li>解释；</li>
+<li>推断；</li>
+<li>判断；</li>
+<li>选择；</li>
+<li>设计；</li>
+<li>生成；</li>
+<li>修正；</li>
+<li>验证。</li>
+</ul>
+<p>例如学习写作，不能止于知道”人物塑造”是什么。</p>
+<p>还需要能够执行：</p>
+<ul>
+<li>从文本中识别人物塑造手段；</li>
+<li>比较两个角色的塑造差异；</li>
+<li>判断某段描写是否有效；</li>
+<li>为角色补充动机；</li>
+<li>修改不符合人物状态的行为；</li>
+<li>独立设计人物变化路径。</li>
+</ul>
+<p>操作使容器成为工作台，而不仅是知识地图。</p>
+<hr>
+</section>
+<section id="判断标准" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="判断标准"><span class="header-section-number">4.6</span> 6. 判断标准</h2>
+<p>学习者需要知道：</p>
+<ul>
+<li>什么算正确；</li>
+<li>什么算有效；</li>
+<li>什么算完成；</li>
+<li>什么情况下应该修改方法；</li>
+<li>什么情况下应该重构容器。</li>
+</ul>
+<p>标准可以包括：</p>
+<ul>
+<li>正确性；</li>
+<li>完整性；</li>
+<li>清晰度；</li>
+<li>区分度；</li>
+<li>解释力；</li>
+<li>预测力；</li>
+<li>可操作性；</li>
+<li>迁移能力；</li>
+<li>调用稳定性；</li>
+<li>结果质量。</li>
+</ul>
+<p>没有标准，学习者无法判断自己是在进步，还是只是在积累更多术语。</p>
+<hr>
+</section>
+<section id="调用线索" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="调用线索"><span class="header-section-number">4.7</span> 7. 调用线索</h2>
+<p>调用线索帮助学习者在具体情境中找到正确知识。</p>
+<p>例如：</p>
+<ul>
+<li>看到某种现象时应该想到什么；</li>
+<li>遇到某类问题时应调用哪个模型；</li>
+<li>出现某种错误时应检查哪个环节；</li>
+<li>满足哪些条件时应切换方法。</li>
+</ul>
+<p>调用线索是知识从”存在于系统中”走向”能够在任务中被激活”的桥梁。</p>
+<hr>
+</section>
+</section>
+<section id="五传统学习为什么经常低效" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 五、传统学习为什么经常低效</h1>
+<p>传统学习常见的路径是：</p>
+<p><span class="math display">\[
+\text{大量接触素材} \rightarrow \text{逐渐发现规律} \rightarrow \text{归纳结构} \rightarrow \text{形成理解}
+\]</span></p>
+<p>这是一条从素材走向容器的路径。</p>
+<p>它并非错误。</p>
+<p>许多人的专业能力，本来就是在长期阅读、实践和失败中逐渐形成的。</p>
+<p>问题在于，这条路径成本很高。</p>
+<p>在容器尚未形成之前，学习者经常经历漫长的碎片阶段：</p>
+<ul>
+<li>不知道哪些信息重要；</li>
+<li>不知道应该观察什么；</li>
+<li>不知道不同资料是否在讨论同一个问题；</li>
+<li>很难判断信息应该放在什么位置；</li>
+<li>笔记越积越多，理解却没有同步增长；</li>
+<li>同一个概念反复遇见，却每次都像第一次看到；</li>
+<li>只能形成模糊的熟悉感，无法形成稳定调用。</li>
+</ul>
+<p>这类学习的核心困难，不是完全没有获得素材，而是缺乏能够承接素材的结构。</p>
+<p>大量素材在脑中并非不存在，而是处于低组织状态。</p>
+<p>一旦某个关键结构形成，过去积累的大量碎片便可能突然归位。</p>
+<p>学习进步因此不一定均匀发生。</p>
+<p>它可能呈现为：</p>
+<p><span class="math display">\[
+\text{碎片积累} \rightarrow \text{结构阈值} \rightarrow \text{整体重组} \rightarrow \text{能力跃迁}
+\]</span></p>
+<p>所谓理解的跃迁，很多时候并不是突然获得了大量新信息，而是已有素材获得了新的组织方式。</p>
+<hr>
+</section>
+<section id="六容器与素材的三种进入顺序" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> 六、容器与素材的三种进入顺序</h1>
+<p>“制造容器—吸收素材”不能被理解为一种固定顺序。</p>
+<p>有效学习至少存在三种进入方式。</p>
+<hr>
+<section id="容器先行" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="容器先行"><span class="header-section-number">6.1</span> 1. 容器先行</h2>
+<p>路径是：</p>
+<p><span class="math display">\[
+C_0 \rightarrow M \rightarrow C_1
+\]</span></p>
+<p>适合：</p>
+<ul>
+<li>术语密集的领域；</li>
+<li>对象和层级相对明确的领域；</li>
+<li>新手缺乏基本方向；</li>
+<li>材料复杂，容易产生认知过载；</li>
+<li>错误探索成本较高。</li>
+</ul>
+<p>例如学习大型代码库之前，先建立：</p>
+<ul>
+<li>项目目标；</li>
+<li>模块划分；</li>
+<li>数据流；</li>
+<li>运行入口；</li>
+<li>核心对象；</li>
+<li>依赖关系。</li>
+</ul>
+<p>通常比直接逐文件阅读更有效。</p>
+<hr>
+</section>
+<section id="素材或问题先行" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="素材或问题先行"><span class="header-section-number">6.2</span> 2. 素材或问题先行</h2>
+<p>路径是：</p>
+<p><span class="math display">\[
+M_0 \rightarrow \text{差异、失败或困惑} \rightarrow C_1
+\]</span></p>
+<p>适合：</p>
+<ul>
+<li>需要建立辨别能力；</li>
+<li>学习对象高度经验化；</li>
+<li>概念抽象，但案例直观；</li>
+<li>需要学习者先意识到问题；</li>
+<li>目标偏向概念理解和迁移。</li>
+</ul>
+<p>例如学习音乐欣赏，可以先听：</p>
+<ul>
+<li>同一旋律，不同乐器；</li>
+<li>同一和声，不同节奏；</li>
+<li>相似主题，不同结构；</li>
+<li>同一片段，不同配器。</li>
+</ul>
+<p>学习者先感受到差异，再用”音色”“节奏”“织体”等容器对差异进行命名。</p>
+<p>此时，容器不再是空标签。</p>
+<hr>
+</section>
+<section id="容器素材螺旋" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="容器素材螺旋"><span class="header-section-number">6.3</span> 3. 容器—素材螺旋</h2>
+<p>这是个人学习的默认模式：</p>
+<p><span class="math display">\[
+C_0 \rightarrow M_1 \rightarrow C_1 \rightarrow M_2 \rightarrow C_2 \rightarrow \cdots
+\]</span></p>
+<p>先建立一个最低可用容器，再吸收一批代表性素材。</p>
+<p>素材进入后：</p>
+<ul>
+<li>支持已有结构；</li>
+<li>填补空缺；</li>
+<li>暴露冲突；</li>
+<li>修正边界；</li>
+<li>迫使重构。</li>
+</ul>
+<p>然后新的容器继续指导下一轮素材选择。</p>
+<p>因此，真正有效的学习不是：</p>
+<blockquote class="blockquote">
+<p>先把完整容器造好，再开始填充。</p>
+</blockquote>
+<p>而是：</p>
+<blockquote class="blockquote">
+<p><strong>先制造一个能够承接第一轮学习的最低可用容器，再让素材不断扩展、调节和重构它。</strong></p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="七素材如何真正进入认知系统" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> 七、素材如何真正进入认知系统</h1>
+<p>素材进入学习系统，不是简单地”看过”或”记下”。</p>
+<p>完整的吸收过程至少包括六个动作。</p>
+<hr>
+<section id="选择" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="选择"><span class="header-section-number">7.1</span> 1. 选择</h2>
+<p>判断哪些素材值得进入系统。</p>
+<p>选择标准包括：</p>
+<ul>
+<li>是否与目标相关；</li>
+<li>是否具有代表性；</li>
+<li>是否可靠；</li>
+<li>是否能够补充当前空缺；</li>
+<li>是否能够检验现有容器；</li>
+<li>是否能够服务具体任务。</li>
+</ul>
+<hr>
+</section>
+<section id="理解与编码" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="理解与编码"><span class="header-section-number">7.2</span> 2. 理解与编码</h2>
+<p>把外部表达转化为自己能够理解和使用的形式。</p>
+<p>例如：</p>
+<ul>
+<li>用自己的语言重新解释；</li>
+<li>把抽象定义转化为案例；</li>
+<li>把案例抽象为规则；</li>
+<li>把复杂过程转化为步骤；</li>
+<li>把零散信息转化为关系。</li>
+</ul>
+<hr>
+</section>
+<section id="归位" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="归位"><span class="header-section-number">7.3</span> 3. 归位</h2>
+<p>判断素材涉及：</p>
+<ul>
+<li>什么对象；</li>
+<li>什么属性；</li>
+<li>什么关系；</li>
+<li>什么过程；</li>
+<li>什么操作；</li>
+<li>什么标准。</li>
+</ul>
+<p>归位不是机械地放进单一文件夹。</p>
+<p>一条素材可以同时进入多个容器。</p>
+<p>例如，一个电影特写镜头可能同时涉及：</p>
+<ul>
+<li>景别；</li>
+<li>人物表演；</li>
+<li>情绪；</li>
+<li>信息强调；</li>
+<li>观众注意；</li>
+<li>剪辑节奏；</li>
+<li>叙事功能。</li>
+</ul>
+<hr>
+</section>
+<section id="连接" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="连接"><span class="header-section-number">7.4</span> 4. 连接</h2>
+<p>把新素材与已有知识建立关系。</p>
+<p>连接可以是：</p>
+<ul>
+<li>相似；</li>
+<li>对立；</li>
+<li>因果；</li>
+<li>组成；</li>
+<li>条件；</li>
+<li>例证；</li>
+<li>反例；</li>
+<li>上位与下位；</li>
+<li>方法与结果。</li>
+</ul>
+<p>没有连接的知识仍然容易孤立。</p>
+<hr>
+</section>
+<section id="检验" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="检验"><span class="header-section-number">7.5</span> 5. 检验</h2>
+<p>判断素材：</p>
+<ul>
+<li>是否可靠；</li>
+<li>是否存在不同解释；</li>
+<li>是否适用于当前情境；</li>
+<li>是否与其他证据冲突；</li>
+<li>是否只是观点而非事实；</li>
+<li>是否可能由大模型或二手资料错误生成。</li>
+</ul>
+<hr>
+</section>
+<section id="提取" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="提取"><span class="header-section-number">7.6</span> 6. 提取</h2>
+<p>在没有原始材料提示的情况下重新调用素材。</p>
+<p>如果一条信息只能在重新看到原文时被识别，就还没有形成稳定内化。</p>
+<hr>
+</section>
+</section>
+<section id="八素材系统的完整类型" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> 八、素材系统的完整类型</h1>
+<p>学习素材不应只是不断扩张的资料库。</p>
+<p>不同素材承担不同认知功能。</p>
+<hr>
+<section id="定义素材" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="定义素材"><span class="header-section-number">8.1</span> 1. 定义素材</h2>
+<p>帮助学习者确定：</p>
+<ul>
+<li>对象是什么；</li>
+<li>对象不是什么；</li>
+<li>与相近概念有什么区别；</li>
+<li>在什么范围内成立。</li>
+</ul>
+<p>定义的作用不是背一句标准答案，而是建立稳定识别能力。</p>
+<hr>
+</section>
+<section id="典型案例" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="典型案例"><span class="header-section-number">8.2</span> 2. 典型案例</h2>
+<p>展示一个概念最清楚、最标准的形态。</p>
+<p>典型案例用于建立基本原型。</p>
+<hr>
+</section>
+<section id="对比案例" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="对比案例"><span class="header-section-number">8.3</span> 3. 对比案例</h2>
+<p>帮助学习者区分相似对象。</p>
+<p>例如：</p>
+<ul>
+<li>主题与题材；</li>
+<li>伏笔与铺垫；</li>
+<li>动作与行为；</li>
+<li>知识与理解；</li>
+<li>相关与因果。</li>
+</ul>
+<p>很多概念只有在对比中才能真正被理解。</p>
+<hr>
+</section>
+<section id="反例" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="反例"><span class="header-section-number">8.4</span> 4. 反例</h2>
+<p>用于攻击当前容器边界。</p>
+<p>反例能够暴露：</p>
+<ul>
+<li>定义过宽；</li>
+<li>定义过窄；</li>
+<li>分类依据错误；</li>
+<li>隐藏条件遗漏；</li>
+<li>表面相似与深层不同。</li>
+</ul>
+<hr>
+</section>
+<section id="边缘案例" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="边缘案例"><span class="header-section-number">8.5</span> 5. 边缘案例</h2>
+<p>同时具有多个类别的特征，或处在概念边界附近。</p>
+<p>边缘案例用于检验：</p>
+<ul>
+<li>对象是否可以多重归属；</li>
+<li>分类是否过于僵硬；</li>
+<li>容器之间是否需要建立交叉关系；</li>
+<li>是否应该从单一标签改为多维描述。</li>
+</ul>
+<hr>
+</section>
+<section id="过程素材" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="过程素材"><span class="header-section-number">8.6</span> 6. 过程素材</h2>
+<p>展示一件事如何完成，包括：</p>
+<ul>
+<li>操作步骤；</li>
+<li>决策顺序；</li>
+<li>工具使用；</li>
+<li>中间状态；</li>
+<li>常见错误；</li>
+<li>修正方式。</li>
+</ul>
+<p>过程素材使知识从”知道是什么”转向”知道怎么做”。</p>
+<hr>
+</section>
+<section id="失败素材" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="失败素材"><span class="header-section-number">8.7</span> 7. 失败素材</h2>
+<p>揭示方法在真实环境中的限制条件。</p>
+<p>失败案例能够显示：</p>
+<ul>
+<li>方法何时失效；</li>
+<li>哪个步骤容易出错；</li>
+<li>哪些变量不能忽略；</li>
+<li>何时需要切换策略；</li>
+<li>哪些成功只是偶然。</li>
+</ul>
+<hr>
+</section>
+<section id="实践素材" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="实践素材"><span class="header-section-number">8.8</span> 8. 实践素材</h2>
+<p>来自真实任务、个人经验和实际作品。</p>
+<p>实践能够带来：</p>
+<ul>
+<li>情境复杂性；</li>
+<li>资源限制；</li>
+<li>时间压力；</li>
+<li>多目标冲突；</li>
+<li>不确定性；</li>
+<li>真实反馈；</li>
+<li>现实后果。</li>
+</ul>
+<p>实践使认知容器与现实发生摩擦。</p>
+<p>这种摩擦是容器升级的重要来源。</p>
+<hr>
+</section>
+</section>
+<section id="九素材质量控制" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> 九、素材质量控制</h1>
+<p>素材不仅需要归位，还需要进行质量判断。</p>
+<p>可以把素材价值表示为：</p>
+<p><span class="math display">\[
+\boxed{
+\begin{aligned}
+&amp;\text{素材价值} \\
+&amp;\quad = \text{相关性} \times \text{代表性} \times \text{可靠性} \times \text{可调用性}
+\end{aligned}
+}
+\]</span></p>
+<hr>
+<section id="相关性" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="相关性"><span class="header-section-number">9.1</span> 1. 相关性</h2>
+<p>素材是否服务当前目标。</p>
+<p>一条信息即使正确，如果与当前任务无关，也可能不值得优先吸收。</p>
+<hr>
+</section>
+<section id="代表性" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="代表性"><span class="header-section-number">9.2</span> 2. 代表性</h2>
+<p>素材是否能够反映这一概念或机制的典型形态。</p>
+<p>只接触特殊案例，容易建立错误原型。</p>
+<hr>
+</section>
+<section id="可靠性" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="可靠性"><span class="header-section-number">9.3</span> 3. 可靠性</h2>
+<p>需要判断：</p>
+<ul>
+<li>来源是什么；</li>
+<li>是事实、观点还是解释；</li>
+<li>是否有证据支持；</li>
+<li>是否存在不同理论；</li>
+<li>是否经过现实验证；</li>
+<li>是否可能存在事实错误或概念偷换。</li>
+</ul>
+<hr>
+</section>
+<section id="可调用性" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="可调用性"><span class="header-section-number">9.4</span> 4. 可调用性</h2>
+<p>素材是否能够服务：</p>
+<ul>
+<li>判断；</li>
+<li>解释；</li>
+<li>操作；</li>
+<li>迁移；</li>
+<li>创造。</li>
+</ul>
+<p>无法进入任何任务的素材，可能只有收藏价值，没有学习价值。</p>
+<hr>
+</section>
+</section>
+<section id="十容器与素材如何共同演化" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> 十、容器与素材如何共同演化</h1>
+<p>素材进入容器后，容器会发生三种基本变化。</p>
+<hr>
+<section id="增添" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="增添"><span class="header-section-number">10.1</span> 1. 增添</h2>
+<p>新素材可以直接进入已有结构。</p>
+<p><span class="math display">\[
+C + M \rightarrow C'
+\]</span></p>
+<p>容器基本不变，内容数量增加。</p>
+<p>例如已经理解”哺乳动物”这一类别后，继续学习不同哺乳动物的具体特征。</p>
+<hr>
+</section>
+<section id="调节" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="调节"><span class="header-section-number">10.2</span> 2. 调节</h2>
+<p>新素材可以被容纳，但会迫使容器修改局部边界、属性或关系。</p>
+<p>例如最初认为：</p>
+<blockquote class="blockquote">
+<p>鸟类就是会飞的动物。</p>
+</blockquote>
+<p>后来接触：</p>
+<ul>
+<li>企鹅；</li>
+<li>鸵鸟；</li>
+<li>蝙蝠。</li>
+</ul>
+<p>此时需要修改分类依据。</p>
+<p>这是一种局部修正：</p>
+<p><span class="math display">\[
+C \rightarrow C^{*}
+\]</span></p>
+<hr>
+</section>
+<section id="重构" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="重构"><span class="header-section-number">10.3</span> 3. 重构</h2>
+<p>有时，新素材无法通过局部修改被容纳。</p>
+<p>问题不在于某个格子太小，而在于整个组织原则存在错误。</p>
+<p>此时需要：</p>
+<ul>
+<li>重新定义核心对象；</li>
+<li>改变分类依据；</li>
+<li>调整层级；</li>
+<li>重建关系；</li>
+<li>引入新的机制；</li>
+<li>放弃旧的解释框架。</li>
+</ul>
+<p>这时发生的是：</p>
+<p><span class="math display">\[
+C_t \rightarrow C_{t+1}
+\]</span></p>
+<p>真正深刻的学习，往往不是增加了更多知识点，而是改变了知识的组织方式。</p>
+<hr>
+</section>
+</section>
+<section id="十一调用是学习质量的核心检验" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> 十一、调用是学习质量的核心检验</h1>
+<p>素材进入容器，并不代表学习已经完成。</p>
+<p>学习者可能只是：</p>
+<ul>
+<li>看见时觉得熟悉；</li>
+<li>听别人解释时能够理解；</li>
+<li>对着笔记能够复述；</li>
+<li>跟随示例能够操作；</li>
+<li>离开材料后无法独立完成。</li>
+</ul>
+<p>因此，学习必须经过调用验证。</p>
+<p>调用是指在具体任务中，能够主动提取和运用已有容器与素材。</p>
+<p>它可以表现为：</p>
+<ul>
+<li>不看材料解释一个概念；</li>
+<li>判断一个新案例属于什么；</li>
+<li>比较两个相似对象；</li>
+<li>解释一个现象为什么发生；</li>
+<li>预测某种条件下可能出现的结果；</li>
+<li>选择合适的方法；</li>
+<li>完成实际任务；</li>
+<li>发现错误并进行修正；</li>
+<li>创造新的方案、表达或作品。</li>
+</ul>
+<p>调用过程可以表示为：</p>
+<p><span class="math display">\[
+(C, M, T) \rightarrow O
+\]</span></p>
+<p>其中：</p>
+<ul>
+<li><span class="math inline">\(C\)</span> 是认知容器；</li>
+<li><span class="math inline">\(M\)</span> 是已内化素材；</li>
+<li><span class="math inline">\(T\)</span> 是当前任务；</li>
+<li><span class="math inline">\(O\)</span> 是输出结果。</li>
+</ul>
+<p>一次成功调用不能证明学习已经完全稳固。</p>
+<p>高质量调用还需要满足：</p>
+<ul>
+<li>脱离原始材料；</li>
+<li>经过一定时间间隔；</li>
+<li>面对不同表述；</li>
+<li>面对陌生案例；</li>
+<li>能够解释判断依据；</li>
+<li>能够根据反馈进行修正。</li>
+</ul>
+<p>因此：</p>
+<blockquote class="blockquote">
+<p><strong>稳定、延迟、迁移性的调用，是知识完成内化的重要证据。</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="十二反馈是防止认知系统封闭的机制" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> 十二、反馈是防止认知系统封闭的机制</h1>
+<p>个人内部觉得”解释通了”，并不能保证容器正确。</p>
+<p>学习还需要外部反馈。</p>
+<p>反馈可以来自：</p>
+<ul>
+<li>正确答案；</li>
+<li>实验结果；</li>
+<li>软件运行结果；</li>
+<li>作品效果；</li>
+<li>教师或专家；</li>
+<li>用户反应；</li>
+<li>工作绩效；</li>
+<li>现实后果。</li>
+</ul>
+<p>完整循环是：</p>
+<p><span class="math display">\[
+\text{调用} \rightarrow \text{输出} \rightarrow \text{外部反馈} \rightarrow \text{误差识别} \rightarrow \text{容器或素材更新}
+\]</span></p>
+<p>反馈可能暴露：</p>
+<ul>
+<li>对象识别错误；</li>
+<li>关系理解错误；</li>
+<li>机制解释错误；</li>
+<li>方法选择错误；</li>
+<li>判断标准错误；</li>
+<li>素材本身不可靠；</li>
+<li>容器无法迁移。</li>
+</ul>
+<p>没有外部反馈，学习系统容易形成一种封闭的自洽。</p>
+<hr>
+</section>
+<section id="十三个人学习工程的标准流程" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> 十三、个人学习工程的标准流程</h1>
+<p>完整的个人学习工程，可以被组织为十个阶段。</p>
+<hr>
+<section id="阶段零诊断当前状态" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="阶段零诊断当前状态"><span class="header-section-number">13.1</span> 阶段零：诊断当前状态</h2>
+<p>在开始学习之前，先确定：</p>
+<ul>
+<li>已经知道什么；</li>
+<li>当前能完成什么；</li>
+<li>存在哪些错误理解；</li>
+<li>缺少哪些前置知识；</li>
+<li>主要卡点在哪里；</li>
+<li>目标与当前状态之间有什么差距。</li>
+</ul>
+<p>这一阶段的产物是：</p>
+<blockquote class="blockquote">
+<p>当前认知系统诊断。</p>
+</blockquote>
+<hr>
+</section>
+<section id="阶段一定义目标产物" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="阶段一定义目标产物"><span class="header-section-number">13.2</span> 阶段一：定义目标产物</h2>
+<p>将”我要学习某个主题”转化为：</p>
+<ul>
+<li>我要能解释什么；</li>
+<li>我要能判断什么；</li>
+<li>我要能完成什么任务；</li>
+<li>我要能产出什么作品；</li>
+<li>我要能在什么情境中使用它。</li>
+</ul>
+<p>目标必须能够被检查。</p>
+<hr>
+</section>
+<section id="阶段二设定边界与资源" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="阶段二设定边界与资源"><span class="header-section-number">13.3</span> 阶段二：设定边界与资源</h2>
+<p>明确：</p>
+<ul>
+<li>当前阶段学到哪里；</li>
+<li>暂时不处理什么；</li>
+<li>可投入多少时间；</li>
+<li>使用哪些资料；</li>
+<li>什么时候需要暂停或结束。</li>
+</ul>
+<hr>
+</section>
+<section id="阶段三建立最低可用容器" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="阶段三建立最低可用容器"><span class="header-section-number">13.4</span> 阶段三：建立最低可用容器</h2>
+<p>围绕目标建立第一版基础结构，包括：</p>
+<ul>
+<li>核心对象；</li>
+<li>主要维度；</li>
+<li>基本关系；</li>
+<li>初步机制；</li>
+<li>常见操作；</li>
+<li>判断标准；</li>
+<li>调用线索。</li>
+</ul>
+<p>初始容器不追求完整，只需要：</p>
+<ol type="1">
+<li>能指导第一轮观察；</li>
+<li>能承接第一批素材；</li>
+<li>能在遇到冲突时被修改。</li>
+</ol>
+<hr>
+</section>
+<section id="阶段四建立素材需求表" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="阶段四建立素材需求表"><span class="header-section-number">13.5</span> 阶段四：建立素材需求表</h2>
+<p>根据容器判断：</p>
+<ul>
+<li>哪些位置为空；</li>
+<li>哪些概念模糊；</li>
+<li>哪些关系尚未验证；</li>
+<li>哪些操作还不会执行；</li>
+<li>哪些判断缺少标准。</li>
+</ul>
+<p>每个核心容器至少可以配置：</p>
+<ul>
+<li>一个清晰定义；</li>
+<li>两到三个典型案例；</li>
+<li>一个对比案例；</li>
+<li>一个反例或边缘案例；</li>
+<li>一个实际操作；</li>
+<li>一个调用任务。</li>
+</ul>
+<hr>
+</section>
+<section id="阶段五吸收代表性素材" class="level2" data-number="13.6">
+<h2 data-number="13.6" class="anchored" data-anchor-id="阶段五吸收代表性素材"><span class="header-section-number">13.6</span> 阶段五：吸收代表性素材</h2>
+<p>第一轮素材优先追求：</p>
+<ul>
+<li>高质量；</li>
+<li>高代表性；</li>
+<li>高差异性；</li>
+<li>高检验价值；</li>
+<li>高任务相关性。</li>
+</ul>
+<p>一百个相似案例，未必比五个差异明显的案例更有价值。</p>
+<hr>
+</section>
+<section id="阶段六素材归位与连接" class="level2" data-number="13.7">
+<h2 data-number="13.7" class="anchored" data-anchor-id="阶段六素材归位与连接"><span class="header-section-number">13.7</span> 阶段六：素材归位与连接</h2>
+<p>每获得一条重要素材，都执行：</p>
+<ol type="1">
+<li>识别它涉及什么对象；</li>
+<li>判断它属于哪个容器；</li>
+<li>标记它说明了什么属性；</li>
+<li>建立它与其他素材的关系；</li>
+<li>判断它支持还是挑战现有结构；</li>
+<li>记录它能够服务什么任务。</li>
+</ol>
+<hr>
+</section>
+<section id="阶段七主动制造冲突" class="level2" data-number="13.8">
+<h2 data-number="13.8" class="anchored" data-anchor-id="阶段七主动制造冲突"><span class="header-section-number">13.8</span> 阶段七：主动制造冲突</h2>
+<p>不要只寻找支持当前框架的素材。</p>
+<p>主动寻找：</p>
+<ul>
+<li>无法归位的案例；</li>
+<li>同时属于多个类别的案例；</li>
+<li>与当前定义冲突的案例；</li>
+<li>使用现有机制无法解释的现象；</li>
+<li>根据现有模型预测失败的结果。</li>
+</ul>
+<p>冲突是发现容器缺陷的重要工具。</p>
+<hr>
+</section>
+<section id="阶段八调节或重构容器" class="level2" data-number="13.9">
+<h2 data-number="13.9" class="anchored" data-anchor-id="阶段八调节或重构容器"><span class="header-section-number">13.9</span> 阶段八：调节或重构容器</h2>
+<p>局部缺陷可以通过：</p>
+<ul>
+<li>修改定义；</li>
+<li>调整边界；</li>
+<li>增加属性；</li>
+<li>补充关系；</li>
+<li>引入条件；</li>
+<li>拆分类别；</li>
+<li>合并重复结构。</li>
+</ul>
+<p>系统性缺陷则需要：</p>
+<ul>
+<li>更换核心对象；</li>
+<li>改变组织原则；</li>
+<li>重建层级；</li>
+<li>引入新机制；</li>
+<li>重写整个容器。</li>
+</ul>
+<hr>
+</section>
+<section id="阶段九进行无提示调用" class="level2" data-number="13.10">
+<h2 data-number="13.10" class="anchored" data-anchor-id="阶段九进行无提示调用"><span class="header-section-number">13.10</span> 阶段九：进行无提示调用</h2>
+<p>移除答案和原材料，完成真实任务。</p>
+<p>调用形式可以包括：</p>
+<ul>
+<li>口头解释；</li>
+<li>闭卷复述；</li>
+<li>新案例分类；</li>
+<li>对比分析；</li>
+<li>问题诊断；</li>
+<li>方法选择；</li>
+<li>实际操作；</li>
+<li>写作输出；</li>
+<li>项目实践；</li>
+<li>教给别人；</li>
+<li>构造新案例。</li>
+</ul>
+<hr>
+</section>
+<section id="阶段十反馈压缩与沉淀" class="level2" data-number="13.11">
+<h2 data-number="13.11" class="anchored" data-anchor-id="阶段十反馈压缩与沉淀"><span class="header-section-number">13.11</span> 阶段十：反馈、压缩与沉淀</h2>
+<p>根据输出和反馈：</p>
+<ul>
+<li>找到错误来源；</li>
+<li>修正容器；</li>
+<li>补充素材；</li>
+<li>更新判断标准；</li>
+<li>提炼高价值结构；</li>
+<li>删除低价值冗余。</li>
+</ul>
+<p>最终沉淀为：</p>
+<ul>
+<li>核心定义；</li>
+<li>关键模型；</li>
+<li>判断规则；</li>
+<li>操作流程；</li>
+<li>典型案例；</li>
+<li>对比案例；</li>
+<li>常见错误；</li>
+<li>快速调用提示；</li>
+<li>可复用模板。</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="十四容器的版本管理" class="level1" data-number="14">
+<h1 data-number="14"><span class="header-section-number">14</span> 十四、容器的版本管理</h1>
+<p>容器不是一次完成的最终答案。</p>
+<p>它应当像软件一样持续迭代。</p>
+<p>例如：</p>
+<ul>
+<li>V0.1：初始骨架；</li>
+<li>V0.2：补充对象与案例；</li>
+<li>V0.3：修正分类边界；</li>
+<li>V0.5：加入机制和操作；</li>
+<li>V1.0：能够稳定支持基础任务；</li>
+<li>V2.0：能够支持迁移、判断和创造。</li>
+</ul>
+<p>版本管理可以记录：</p>
+<ul>
+<li>哪些对象被新增；</li>
+<li>哪些定义被修改；</li>
+<li>哪些关系被重构；</li>
+<li>哪些反例推动了变化；</li>
+<li>哪些旧理解被放弃；</li>
+<li>哪些调用能力获得提升。</li>
+</ul>
+<p>这可以防止学习者把当前版本误认为最终真理。</p>
+<hr>
+</section>
+<section id="十五如何判断一个容器是否高质量" class="level1" data-number="15">
+<h1 data-number="15"><span class="header-section-number">15</span> 十五、如何判断一个容器是否高质量</h1>
+<p>一个认知容器至少可以从九个维度检验。</p>
+<section id="承接力" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="承接力"><span class="header-section-number">15.1</span> 1. 承接力</h2>
+<p>新素材进入后，是否能够找到合理位置。</p>
+</section>
+<section id="区分力" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="区分力"><span class="header-section-number">15.2</span> 2. 区分力</h2>
+<p>是否能够区分表面相似、深层不同的对象。</p>
+</section>
+<section id="解释力" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="解释力"><span class="header-section-number">15.3</span> 3. 解释力</h2>
+<p>是否能够说明一个现象为什么发生。</p>
+</section>
+<section id="压缩力" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="压缩力"><span class="header-section-number">15.4</span> 4. 压缩力</h2>
+<p>是否能够用少量结构组织大量案例。</p>
+</section>
+<section id="预测力" class="level2" data-number="15.5">
+<h2 data-number="15.5" class="anchored" data-anchor-id="预测力"><span class="header-section-number">15.5</span> 5. 预测力</h2>
+<p>是否能够根据条件推断未知结果。</p>
+</section>
+<section id="操作力" class="level2" data-number="15.6">
+<h2 data-number="15.6" class="anchored" data-anchor-id="操作力"><span class="header-section-number">15.6</span> 6. 操作力</h2>
+<p>是否能够指导识别、判断、选择和行动。</p>
+</section>
+<section id="迁移力" class="level2" data-number="15.7">
+<h2 data-number="15.7" class="anchored" data-anchor-id="迁移力"><span class="header-section-number">15.7</span> 7. 迁移力</h2>
+<p>是否能够在陌生情境中继续发挥作用。</p>
+</section>
+<section id="可修正性" class="level2" data-number="15.8">
+<h2 data-number="15.8" class="anchored" data-anchor-id="可修正性"><span class="header-section-number">15.8</span> 8. 可修正性</h2>
+<p>是否能够在面对反例和失败时进行调整。</p>
+</section>
+<section id="调用效率" class="level2" data-number="15.9">
+<h2 data-number="15.9" class="anchored" data-anchor-id="调用效率"><span class="header-section-number">15.9</span> 9. 调用效率</h2>
+<p>是否能够在需要时被快速、准确地激活。</p>
+<hr>
+</section>
+</section>
+<section id="十六个人学习中的常见系统故障" class="level1" data-number="16">
+<h1 data-number="16"><span class="header-section-number">16</span> 十六、个人学习中的常见系统故障</h1>
+<section id="只有素材没有容器" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="只有素材没有容器"><span class="header-section-number">16.1</span> 1. 只有素材，没有容器</h2>
+<p>表现为：</p>
+<ul>
+<li>收藏大量资料；</li>
+<li>记了大量笔记；</li>
+<li>内容彼此孤立；</li>
+<li>无法解释整体结构；</li>
+<li>无法在任务中调用。</li>
+</ul>
+<p>这是素材堆积，不是系统学习。</p>
+<hr>
+</section>
+<section id="只有容器没有素材" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="只有容器没有素材"><span class="header-section-number">16.2</span> 2. 只有容器，没有素材</h2>
+<p>表现为：</p>
+<ul>
+<li>设计大量目录；</li>
+<li>罗列很多术语；</li>
+<li>框架看起来完整；</li>
+<li>无法提供真实案例；</li>
+<li>无法处理具体问题；</li>
+<li>无法解释边缘情境。</li>
+</ul>
+<p>这是空容器。</p>
+<hr>
+</section>
+<section id="初始容器过大" class="level2" data-number="16.3">
+<h2 data-number="16.3" class="anchored" data-anchor-id="初始容器过大"><span class="header-section-number">16.3</span> 3. 初始容器过大</h2>
+<p>学习开始前就试图覆盖整个领域，建立几十个模块、几百个概念。</p>
+<p>这会制造新的认知负担。</p>
+<p>最低可用容器只需要支撑下一轮学习。</p>
+<hr>
+</section>
+<section id="容器建立在错误定义上" class="level2" data-number="16.4">
+<h2 data-number="16.4" class="anchored" data-anchor-id="容器建立在错误定义上"><span class="header-section-number">16.4</span> 4. 容器建立在错误定义上</h2>
+<p>错误的初始定义会让后续素材被系统性误读。</p>
+<p>因此，所有初始容器都应当被视为：</p>
+<blockquote class="blockquote">
+<p>等待素材和现实检验的假设结构。</p>
+</blockquote>
+<hr>
+</section>
+<section id="容器过于僵硬" class="level2" data-number="16.5">
+<h2 data-number="16.5" class="anchored" data-anchor-id="容器过于僵硬"><span class="header-section-number">16.5</span> 5. 容器过于僵硬</h2>
+<p>学习者开始维护框架，而不是理解现实。</p>
+<p>面对不符合框架的素材时，简单将其视为：</p>
+<ul>
+<li>特例；</li>
+<li>异常；</li>
+<li>无关内容；</li>
+<li>不标准案例。</li>
+</ul>
+<p>此时容器不再促进学习，而是在屏蔽现实。</p>
+<hr>
+</section>
+<section id="使用借来的容器" class="level2" data-number="16.6">
+<h2 data-number="16.6" class="anchored" data-anchor-id="使用借来的容器"><span class="header-section-number">16.6</span> 6. 使用借来的容器</h2>
+<p>学习者能够复述专家框架，却无法说明：</p>
+<ul>
+<li>为什么这样划分；</li>
+<li>每个类别解决什么问题；</li>
+<li>划分依据是什么；</li>
+<li>是否存在其他划分方式；</li>
+<li>什么情况下需要重构。</li>
+</ul>
+<p>借来的框架可以作为脚手架，但必须经过个人理解、素材检验和调用实践，才能真正转化为自己的认知结构。</p>
+<hr>
+</section>
+<section id="把熟悉误认为掌握" class="level2" data-number="16.7">
+<h2 data-number="16.7" class="anchored" data-anchor-id="把熟悉误认为掌握"><span class="header-section-number">16.7</span> 7. 把熟悉误认为掌握</h2>
+<p>阅读时能看懂，不等于能够独立调用。</p>
+<p>真正掌握必须经过：</p>
+<ul>
+<li>无提示回忆；</li>
+<li>延迟提取；</li>
+<li>新案例识别；</li>
+<li>独立解释；</li>
+<li>实际操作；</li>
+<li>结果检验。</li>
+</ul>
+<hr>
+</section>
+<section id="沉迷整理而不进入现实" class="level2" data-number="16.8">
+<h2 data-number="16.8" class="anchored" data-anchor-id="沉迷整理而不进入现实"><span class="header-section-number">16.8</span> 8. 沉迷整理而不进入现实</h2>
+<p>整理知识本身容易带来秩序感和完成感。</p>
+<p>但如果缺少真实任务，学习系统可能一直停留在内部设计阶段。</p>
+<p>容器最终必须进入：</p>
+<ul>
+<li>判断；</li>
+<li>表达；</li>
+<li>决策；</li>
+<li>创作；</li>
+<li>工作；</li>
+<li>生活；</li>
+<li>实践。</li>
+</ul>
+<p>否则，学习只是在建造一个永远不开门的系统。</p>
+<hr>
+</section>
+<section id="无限学习没有停止条件" class="level2" data-number="16.9">
+<h2 data-number="16.9" class="anchored" data-anchor-id="无限学习没有停止条件"><span class="header-section-number">16.9</span> 9. 无限学习，没有停止条件</h2>
+<p>没有停止条件，学习会变成永不完结的资料工程。</p>
+<p>一轮学习可以在满足以下条件后暂时结束：</p>
+<ul>
+<li>能够完成目标任务；</li>
+<li>核心对象可以稳定识别；</li>
+<li>关键关系能够解释；</li>
+<li>常见案例可以处理；</li>
+<li>重要反例不会击穿整体结构；</li>
+<li>能在新情境中进行基础迁移；</li>
+<li>继续投入的边际收益已经明显下降。</li>
+</ul>
+<p>这不是”彻底学完”，而是达到当前目标下的充分状态。</p>
+<hr>
+</section>
+</section>
+<section id="十七大模型时代的学习构造" class="level1" data-number="17">
+<h1 data-number="17"><span class="header-section-number">17</span> 十七、大模型时代的学习构造</h1>
+<p>大模型改变学习的关键，不只是提供更多答案。</p>
+<p>真正重要的变化是：</p>
+<blockquote class="blockquote">
+<p><strong>大模型显著降低了制造初始容器、整理素材、发现关系、构造反例和设计训练的成本。</strong></p>
+</blockquote>
+<p>过去，学习者常常需要接触大量素材后，才能缓慢归纳出领域结构。</p>
+<p>现在，大模型可以协助：</p>
+<ul>
+<li>生成领域初始骨架；</li>
+<li>梳理核心对象和维度；</li>
+<li>比较不同理论结构；</li>
+<li>解释相近概念之间的区别；</li>
+<li>生成典型案例与反例；</li>
+<li>将资料归入容器；</li>
+<li>发现分类重叠和遗漏；</li>
+<li>构造调用任务；</li>
+<li>模拟不同情境；</li>
+<li>审查当前容器；</li>
+<li>压缩并沉淀学习成果。</li>
+</ul>
+<hr>
+<section id="容器生成器" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="容器生成器"><span class="header-section-number">17.1</span> 1. 容器生成器</h2>
+<p>帮助学习者快速建立最低可用结构。</p>
+<p>但生成结果必须被视为草案，而不是最终答案。</p>
+<hr>
+</section>
+<section id="素材筛选器" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="素材筛选器"><span class="header-section-number">17.2</span> 2. 素材筛选器</h2>
+<p>从大量资料中提取：</p>
+<ul>
+<li>核心定义；</li>
+<li>典型案例；</li>
+<li>关键机制；</li>
+<li>实际方法；</li>
+<li>高价值反例。</li>
+</ul>
+<hr>
+</section>
+<section id="结构审查器" class="level2" data-number="17.3">
+<h2 data-number="17.3" class="anchored" data-anchor-id="结构审查器"><span class="header-section-number">17.3</span> 3. 结构审查器</h2>
+<p>检查当前容器中的：</p>
+<ul>
+<li>对象遗漏；</li>
+<li>层级混乱；</li>
+<li>概念重叠；</li>
+<li>关系缺失；</li>
+<li>定义冲突；</li>
+<li>逻辑断裂。</li>
+</ul>
+<hr>
+</section>
+<section id="反例生成器" class="level2" data-number="17.4">
+<h2 data-number="17.4" class="anchored" data-anchor-id="反例生成器"><span class="header-section-number">17.4</span> 4. 反例生成器</h2>
+<p>主动攻击当前结构，寻找：</p>
+<ul>
+<li>无法解释的案例；</li>
+<li>边缘情况；</li>
+<li>冲突定义；</li>
+<li>失败条件；</li>
+<li>迁移障碍。</li>
+</ul>
+<hr>
+</section>
+<section id="调用训练器" class="level2" data-number="17.5">
+<h2 data-number="17.5" class="anchored" data-anchor-id="调用训练器"><span class="header-section-number">17.5</span> 5. 调用训练器</h2>
+<p>根据容器生成：</p>
+<ul>
+<li>识别题；</li>
+<li>对比题；</li>
+<li>解释题；</li>
+<li>判断题；</li>
+<li>操作题；</li>
+<li>迁移题；</li>
+<li>创造题。</li>
+</ul>
+<hr>
+</section>
+<section id="版本编辑器" class="level2" data-number="17.6">
+<h2 data-number="17.6" class="anchored" data-anchor-id="版本编辑器"><span class="header-section-number">17.6</span> 6. 版本编辑器</h2>
+<p>将新素材、调用结果和失败反馈，沉淀为更新后的容器版本。</p>
+<hr>
+</section>
+<section id="大模型不能替代什么" class="level2" data-number="17.7">
+<h2 data-number="17.7" class="anchored" data-anchor-id="大模型不能替代什么"><span class="header-section-number">17.7</span> 7. 大模型不能替代什么</h2>
+<p>大模型不能替代：</p>
+<ul>
+<li>个人目标；</li>
+<li>真实经验；</li>
+<li>现实检验；</li>
+<li>最终判断；</li>
+<li>长期调用；</li>
+<li>能力自动化。</li>
+</ul>
+<p>大模型生成的框架可能看起来完整、专业、逻辑顺畅，却仍然可能：</p>
+<ul>
+<li>分类依据不一致；</li>
+<li>只罗列概念；</li>
+<li>缺少真实机制；</li>
+<li>忽略边缘情况；</li>
+<li>过度抽象；</li>
+<li>产生虚假完整感；</li>
+<li>包含事实错误。</li>
+</ul>
+<p>因此，大模型最适合成为：</p>
+<blockquote class="blockquote">
+<p><strong>个人认知工程的助手，而不是最终知识权威。</strong></p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="十八完整运行模型" class="level1" data-number="18">
+<h1 data-number="18"><span class="header-section-number">18</span> 十八、完整运行模型</h1>
+<p>个人学习工程可以被压缩为一个控制循环。</p>
+<section id="设计约束" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="设计约束"><span class="header-section-number">18.1</span> 1. 设计约束</h2>
+<p><span class="math display">\[
+G = \{\text{目标、场景、边界、资源、产物}\}
+\]</span></p>
+</section>
+<section id="两类核心资产" class="level2" data-number="18.2">
+<h2 data-number="18.2" class="anchored" data-anchor-id="两类核心资产"><span class="header-section-number">18.2</span> 2. 两类核心资产</h2>
+<p><span class="math display">\[
+A_t = (C_t, M_t)
+\]</span></p>
+<p>其中：</p>
+<ul>
+<li><span class="math inline">\(C_t\)</span>：当前认知容器系统；</li>
+<li><span class="math inline">\(M_t\)</span>：当前已经内化并可参与调用的素材。</li>
+</ul>
+</section>
+<section id="学习任务" class="level2" data-number="18.3">
+<h2 data-number="18.3" class="anchored" data-anchor-id="学习任务"><span class="header-section-number">18.3</span> 3. 学习任务</h2>
+<p><span class="math display">\[
+T_t
+\]</span></p>
+<p>任务负责迫使容器和素材进入实际调用。</p>
+</section>
+<section id="输出" class="level2" data-number="18.4">
+<h2 data-number="18.4" class="anchored" data-anchor-id="输出"><span class="header-section-number">18.4</span> 4. 输出</h2>
+<p><span class="math display">\[
+O_t = h(C_t, M_t, T_t)
+\]</span></p>
+</section>
+<section id="反馈" class="level2" data-number="18.5">
+<h2 data-number="18.5" class="anchored" data-anchor-id="反馈"><span class="header-section-number">18.5</span> 5. 反馈</h2>
+<p><span class="math display">\[
+F_t
+\]</span></p>
+<p>反馈来自标准、他人、实验、系统结果和现实后果。</p>
+</section>
+<section id="更新" class="level2" data-number="18.6">
+<h2 data-number="18.6" class="anchored" data-anchor-id="更新"><span class="header-section-number">18.6</span> 6. 更新</h2>
+<p><span class="math display">\[
+(C_{t+1}, M_{t+1}) = U(C_t, M_t, T_t, F_t)
+\]</span></p>
+<p>完整结构是：</p>
+<p><span class="math display">\[
+\boxed{
+\begin{aligned}
+&amp;\text{目标约束} \rightarrow \text{容器与素材} \\
+&amp;\quad \rightarrow \text{任务调用} \rightarrow \text{输出反馈} \\
+&amp;\quad \rightarrow \text{系统更新}
+\end{aligned}
+}
+\]</span></p>
+<p>因此，可以给出这套理论的正式定义：</p>
+<blockquote class="blockquote">
+<p><strong>个人学习，是在目标、场景与资源约束下，持续建造认知容器、吸收和内化学习素材，并通过任务调用与外部反馈不断调节和重构认知系统的过程。</strong></p>
+</blockquote>
+<p>其中：</p>
+<blockquote class="blockquote">
+<p><strong>容器与素材是学习形成的两类核心资产；调用与反馈是学习系统的校验机制；调节与重构是学习进步的基本方式。</strong></p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="十九学习工程应沉淀的长期资产" class="level1" data-number="19">
+<h1 data-number="19"><span class="header-section-number">19</span> 十九、学习工程应沉淀的长期资产</h1>
+<p>成熟的个人学习系统，最终不应只留下资料和笔记。</p>
+<p>它应当沉淀出以下长期资产。</p>
+<section id="容器地图" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="容器地图"><span class="header-section-number">19.1</span> 1. 容器地图</h2>
+<p>说明一个领域中有哪些核心对象、维度、关系、过程和操作。</p>
+</section>
+<section id="核心定义库" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="核心定义库"><span class="header-section-number">19.2</span> 2. 核心定义库</h2>
+<p>保存经过检验的关键概念及其边界。</p>
+</section>
+<section id="代表性素材库" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="代表性素材库"><span class="header-section-number">19.3</span> 3. 代表性素材库</h2>
+<p>包含典型案例、对比案例、反例、边缘案例和失败案例。</p>
+</section>
+<section id="机制模型" class="level2" data-number="19.4">
+<h2 data-number="19.4" class="anchored" data-anchor-id="机制模型"><span class="header-section-number">19.4</span> 4. 机制模型</h2>
+<p>解释系统如何运行，以及变化为什么发生。</p>
+</section>
+<section id="操作流程" class="level2" data-number="19.5">
+<h2 data-number="19.5" class="anchored" data-anchor-id="操作流程"><span class="header-section-number">19.5</span> 5. 操作流程</h2>
+<p>将知识转化为可执行动作。</p>
+</section>
+<section id="判断标准-1" class="level2" data-number="19.6">
+<h2 data-number="19.6" class="anchored" data-anchor-id="判断标准-1"><span class="header-section-number">19.6</span> 6. 判断标准</h2>
+<p>帮助个人评价对象、方法和结果。</p>
+</section>
+<section id="调用任务集" class="level2" data-number="19.7">
+<h2 data-number="19.7" class="anchored" data-anchor-id="调用任务集"><span class="header-section-number">19.7</span> 7. 调用任务集</h2>
+<p>用于复习、迁移和能力验证。</p>
+</section>
+<section id="版本记录" class="level2" data-number="19.8">
+<h2 data-number="19.8" class="anchored" data-anchor-id="版本记录"><span class="header-section-number">19.8</span> 8. 版本记录</h2>
+<p>记录容器如何被素材、实践和反馈不断修正。</p>
+<p>这些资产共同构成个人可以长期复用的认知基础设施。</p>
+<hr>
+</section>
+</section>
+<section id="结语从信息消费者转向认知系统建造者" class="level1" data-number="20">
+<h1 data-number="20"><span class="header-section-number">20</span> 结语：从信息消费者转向认知系统建造者</h1>
+<p>低水平学习关注的是：</p>
+<blockquote class="blockquote">
+<p>我今天看了多少，记住了多少。</p>
+</blockquote>
+<p>更成熟的学习关注的是：</p>
+<blockquote class="blockquote">
+<p>我建立了什么结构，吸收了什么素材，修正了什么理解，形成了什么能力。</p>
+</blockquote>
+<p>学习不是把世界上的信息搬进大脑。</p>
+<p>学习是围绕个人目标，对信息进行选择、理解、组织、压缩、解释、检验和调用，并最终将其转化为理解现实和改变现实的能力。</p>
+<p>因此，个人学习的完整工程可以被概括为：</p>
+<p><span class="math display">\[
+\boxed{
+\begin{aligned}
+&amp;\text{诊断现状} \rightarrow \text{定义目标} \rightarrow \text{制造容器} \\
+&amp;\quad \rightarrow \text{采集素材} \rightarrow \text{素材归位} \\
+&amp;\quad \rightarrow \text{比较与冲突} \rightarrow \text{调节与重构} \\
+&amp;\quad \rightarrow \text{调用与反馈} \rightarrow \text{压缩与沉淀}
+\end{aligned}
+}
+\]</span></p>
+<p>最终，学习者不再只是被动接受他人整理好的知识，而是成为自己认知系统的设计者、建造者和维护者。</p>
+<blockquote class="blockquote">
+<p><strong>学习，就是用结构承接世界，再让世界不断重造结构。</strong></p>
+</blockquote>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/liamamilin\.github\.io\/IBlogs");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
