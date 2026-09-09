@@ -9,8 +9,634 @@
 <link>https://liamamilin.github.io/IBlogs/</link>
 <atom:link href="https://liamamilin.github.io/IBlogs/index.xml" rel="self" type="application/rss+xml"/>
 <description>Lin</description>
-<generator>quarto-1.9.36</generator>
-<lastBuildDate>Tue, 14 Jul 2026 16:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Tue, 08 Sep 2026 16:00:00 GMT</lastBuildDate>
+<item>
+  <title>Concept–Operation Capability：概念—操作能力</title>
+  <dc:creator>Lin </dc:creator>
+  <link>https://liamamilin.github.io/IBlogs/posts/concept-operation-capability/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="核心定义" class="level1">
+<h1>1. 核心定义</h1>
+<p>大模型时代，学习一个领域时，最值得长期掌握的，不再首先是大量具体语法、API 和实现细节，而是：</p>
+<blockquote class="blockquote">
+<p><strong>这个领域有哪些关键概念，以及围绕这些概念可以进行哪些操作。</strong></p>
+</blockquote>
+<p>这就是：</p>
+</section>
+<section id="conceptoperation-capability" class="level1">
+<h1><strong>Concept–Operation Capability</strong></h1>
+</section>
+<section id="概念操作能力" class="level1">
+<h1><strong>概念—操作能力</strong></h1>
+<p>最基本的形式：</p>
+<pre class="text"><code>Concept
+   ↓
+Operations</code></pre>
+<p>例如：</p>
+<pre class="text"><code>Axis
+├─ set range
+├─ transform
+├─ label
+├─ format
+└─ hide</code></pre>
+<p>真正“会”一个领域，不一定意味着记得所有实现语法。</p>
+<p>更重要的是：</p>
+<blockquote class="blockquote">
+<p><strong>看到问题时，知道有哪些概念可以调用；</strong></p>
+<p><strong>看到概念时，知道围绕它可以做什么。</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="为什么它重要" class="level1">
+<h1>2. 为什么它重要</h1>
+<p>过去，技术能力中很大一部分是：</p>
+<blockquote class="blockquote">
+<p><strong>记住具体怎么实现。</strong></p>
+</blockquote>
+<p>例如：</p>
+<ul>
+<li>函数叫什么</li>
+<li>参数怎么写</li>
+<li>API 怎么调用</li>
+<li>配置文件怎么写</li>
+<li>boilerplate 怎么组织</li>
+</ul>
+<p>大模型正在显著降低这部分知识的长期记忆价值。</p>
+<p>具体实现越来越可以：</p>
+<blockquote class="blockquote">
+<p><strong>Just-in-time 获取。</strong></p>
+</blockquote>
+<p>但是如果一个人不知道：</p>
+<blockquote class="blockquote">
+<p>有什么概念，</p>
+<p>有哪些操作，</p>
+<p>哪些操作能够改变结果，</p>
+</blockquote>
+<p>那么即使拥有很强的大模型，也很难正确指挥它。</p>
+<p>因此能力重心开始从：</p>
+<blockquote class="blockquote">
+<p><strong>记住实现</strong></p>
+</blockquote>
+<p>转向：</p>
+<blockquote class="blockquote">
+<p><strong>掌握能力空间。</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="concept-有什么" class="level1">
+<h1>3. Concept —— 有什么？</h1>
+<p>Concept 回答：</p>
+<blockquote class="blockquote">
+<p><strong>这个领域里有哪些重要的东西？</strong></p>
+</blockquote>
+<p>它可以是：</p>
+<ul>
+<li>对象</li>
+<li>结构</li>
+<li>机制</li>
+<li>状态</li>
+<li>指标</li>
+<li>组件</li>
+<li>抽象概念</li>
+</ul>
+<p>例如 LLM Serving 中：</p>
+<ul>
+<li>Model</li>
+<li>Weights</li>
+<li>Request</li>
+<li>Token</li>
+<li>KV Cache</li>
+<li>Batch</li>
+<li>Quantization</li>
+<li>Router</li>
+<li>Latency</li>
+<li>Throughput</li>
+</ul>
+<p>Concept 的价值在于：</p>
+<blockquote class="blockquote">
+<p><strong>给能力提供一个可以被识别和调用的对象。</strong></p>
+</blockquote>
+<p>如果不知道一个概念存在，通常也很难主动想到围绕它采取行动。</p>
+<hr>
+</section>
+<section id="operation-能做什么" class="level1">
+<h1>4. Operation —— 能做什么？</h1>
+<p>Operation 回答：</p>
+<blockquote class="blockquote">
+<p><strong>围绕这个概念，可以做哪些事情？</strong></p>
+</blockquote>
+<p>例如：</p>
+<section id="model" class="level3">
+<h3 class="anchored" data-anchor-id="model">Model</h3>
+<p>可以：</p>
+<ul>
+<li>load</li>
+<li>fine-tune</li>
+<li>quantize</li>
+<li>shard</li>
+<li>serve</li>
+<li>route</li>
+</ul>
+</section>
+<section id="request" class="level3">
+<h3 class="anchored" data-anchor-id="request">Request</h3>
+<p>可以：</p>
+<ul>
+<li>queue</li>
+<li>batch</li>
+<li>route</li>
+<li>prioritize</li>
+<li>cache</li>
+</ul>
+</section>
+<section id="kv-cache" class="level3">
+<h3 class="anchored" data-anchor-id="kv-cache">KV Cache</h3>
+<p>可以：</p>
+<ul>
+<li>allocate</li>
+<li>reuse</li>
+<li>evict</li>
+<li>manage</li>
+<li>compress</li>
+</ul>
+<p>于是：</p>
+<blockquote class="blockquote">
+<p><strong>Concept 告诉你“有什么”。</strong></p>
+<p><strong>Operation 告诉你“哪里可以动”。</strong></p>
+</blockquote>
+<p>这两者结合起来，才形成真正可调用的能力。</p>
+<hr>
+</section>
+</section>
+<section id="概念操作矩阵" class="level1">
+<h1>5. 概念—操作矩阵</h1>
+<p>一个领域可以近似表示为：</p>
+<blockquote class="blockquote">
+<p><strong>Concept × Operation</strong></p>
+</blockquote>
+<p>例如数据可视化：</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>常见 Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Data</strong></td>
+<td>filter, aggregate, transform, reorder</td>
+</tr>
+<tr class="even">
+<td><strong>Geometry</strong></td>
+<td>choose, add, replace</td>
+</tr>
+<tr class="odd">
+<td><strong>Axis</strong></td>
+<td>set range, transform, label, format</td>
+</tr>
+<tr class="even">
+<td><strong>Color</strong></td>
+<td>map, set, scale, highlight</td>
+</tr>
+<tr class="odd">
+<td><strong>Grid</strong></td>
+<td>show, hide, weaken</td>
+</tr>
+<tr class="even">
+<td><strong>Legend</strong></td>
+<td>move, rename, reorder, hide</td>
+</tr>
+<tr class="odd">
+<td><strong>Label</strong></td>
+<td>add, position, format</td>
+</tr>
+<tr class="even">
+<td><strong>Theme</strong></td>
+<td>simplify, customize, standardize</td>
+</tr>
+</tbody>
+</table>
+<p>当你觉得一张图有问题时，不需要首先记住某个具体函数。</p>
+<p>你会先想到：</p>
+<blockquote class="blockquote">
+<p>Axis 可以调整。 Color 可以重新映射。 Grid 可以弱化。 Label 可以重新布局。 Theme 可以整体改变。</p>
+</blockquote>
+<p>具体代码可以再交给 AI 实现。</p>
+<p>这就是概念—操作能力。</p>
+<hr>
+</section>
+<section id="仅知道-concept-和-operation-还不完全够" class="level1">
+<h1>6. 仅知道 Concept 和 Operation 还不完全够</h1>
+<p>为了真正使用一个概念，还需要两类辅助知识：</p>
+<blockquote class="blockquote">
+<p><strong>Relation</strong></p>
+<p>和</p>
+<p><strong>Judgment</strong></p>
+</blockquote>
+<p>但它们是辅助层，不改变 Concept–Operation 的核心地位。</p>
+<hr>
+</section>
+<section id="relation-怎么关联" class="level1">
+<h1>7. Relation —— 怎么关联？</h1>
+<p>Relation 回答：</p>
+<blockquote class="blockquote">
+<p><strong>这个概念和其他概念之间有什么重要关系？</strong></p>
+</blockquote>
+<p>例如：</p>
+<pre class="text"><code>Context Length
+      ↓
+increases
+      ↓
+KV Cache Usage
+      ↓
+affects
+      ↓
+GPU Memory
+      ↓
+affects
+      ↓
+Concurrency</code></pre>
+<p>如果只知道 KV Cache 的定义，你只是“认识它”。</p>
+<p>如果进一步知道：</p>
+<blockquote class="blockquote">
+<p>context length、KV cache、显存和并发之间如何相互影响，</p>
+</blockquote>
+<p>你才开始形成系统理解。</p>
+<p>因此：</p>
+<blockquote class="blockquote">
+<p><strong>Concept 给节点。</strong></p>
+<p><strong>Relation 给连接。</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="judgment-什么时候用什么叫好" class="level1">
+<h1>8. Judgment —— 什么时候用，什么叫好？</h1>
+<p>Judgment 回答：</p>
+<blockquote class="blockquote">
+<p><strong>什么时候应该使用某个 Operation？</strong></p>
+<p><strong>它有什么代价？</strong></p>
+<p><strong>怎样判断结果是否好？</strong></p>
+</blockquote>
+<p>例如 Quantization：</p>
+<p>知道：</p>
+<blockquote class="blockquote">
+<p>模型可以 Quantize。</p>
+</blockquote>
+<p>只是 Operation Knowledge。</p>
+<p>进一步还要知道：</p>
+<blockquote class="blockquote">
+<p>为什么量化？ 什么情况下值得量化？ 它可能损失什么？ 应该比较显存、速度还是质量？</p>
+</blockquote>
+<p>这才让概念真正可用于解决问题。</p>
+<p>因此：</p>
+<blockquote class="blockquote">
+<p><strong>Concept + Operation 是核心。</strong></p>
+<p><strong>Relation + Judgment 让它变得可用。</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="掌握一个概念的四个层级" class="level1">
+<h1>9. 掌握一个概念的四个层级</h1>
+<section id="level-1name" class="level2">
+<h2 class="anchored" data-anchor-id="level-1name">Level 1：Name</h2>
+<blockquote class="blockquote">
+<p>我听说过这个词。</p>
+</blockquote>
+<p>例如：</p>
+<blockquote class="blockquote">
+<p>KV Cache。</p>
+</blockquote>
+<p>只是词汇记忆。</p>
+<hr>
+</section>
+<section id="level-2concept" class="level2">
+<h2 class="anchored" data-anchor-id="level-2concept">Level 2：Concept</h2>
+<blockquote class="blockquote">
+<p>我知道它是什么。</p>
+</blockquote>
+<p>已经具有基本理解。</p>
+<hr>
+</section>
+<section id="level-3operation" class="level2">
+<h2 class="anchored" data-anchor-id="level-3operation">Level 3：Operation</h2>
+<blockquote class="blockquote">
+<p>我知道围绕它可以做什么。</p>
+</blockquote>
+<p>这时开始进入真正的能力层。</p>
+<hr>
+</section>
+<section id="level-4relation-judgment" class="level2">
+<h2 class="anchored" data-anchor-id="level-4relation-judgment">Level 4：Relation + Judgment</h2>
+<blockquote class="blockquote">
+<p>我知道它和什么相关、什么时候使用、使用以后会产生什么影响。</p>
+</blockquote>
+<p>这时才形成真正可迁移的领域能力。</p>
+<p>可以压缩成：</p>
+</section>
+</section>
+<section id="name-concept-operation-system-use" class="level1">
+<h1><strong>Name → Concept → Operation → System Use</strong></h1>
+<hr>
+</section>
+<section id="概念操作能力不等于-api-记忆" class="level1">
+<h1>10. 概念—操作能力不等于 API 记忆</h1>
+<p>需要明确区分两种知识。</p>
+<section id="实现知识" class="level2">
+<h2 class="anchored" data-anchor-id="实现知识">实现知识</h2>
+<p>例如：</p>
+<ul>
+<li>函数名</li>
+<li>参数名</li>
+<li>API 调用格式</li>
+<li>配置语法</li>
+<li>boilerplate</li>
+</ul>
+<p>这些知识通常：</p>
+<blockquote class="blockquote">
+<p>变化快，</p>
+<p>容易查，</p>
+<p>容易由 AI 生成。</p>
+</blockquote>
+<hr>
+</section>
+<section id="概念操作知识" class="level2">
+<h2 class="anchored" data-anchor-id="概念操作知识">概念—操作知识</h2>
+<p>例如：</p>
+<blockquote class="blockquote">
+<p>inference 可以 batching。 model 可以 quantize。 request 可以 route。 cache 可以 reuse。 retrieval 可以 rerank。</p>
+</blockquote>
+<p>这些知识决定：</p>
+<blockquote class="blockquote">
+<p><strong>你是否知道有哪些解决办法。</strong></p>
+</blockquote>
+<p>所以大模型时代更合理的策略是：</p>
+<blockquote class="blockquote">
+<p><strong>长期内化概念与操作，按需获取实现细节。</strong></p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="学习一个领域应该建立什么" class="level1">
+<h1>11. 学习一个领域应该建立什么？</h1>
+<p>不需要先做一套庞大知识体系。</p>
+<p>优先建立四张小地图。</p>
+<section id="concept-map" class="level2">
+<h2 class="anchored" data-anchor-id="concept-map">① Concept Map</h2>
+<blockquote class="blockquote">
+<p><strong>有哪些关键概念？</strong></p>
+</blockquote>
+<p>要求：</p>
+<ul>
+<li>少而重要</li>
+<li>先抓主干</li>
+<li>不追求一次完整</li>
+</ul>
+<hr>
+</section>
+<section id="operation-map" class="level2">
+<h2 class="anchored" data-anchor-id="operation-map">② Operation Map</h2>
+<p>对每个 Concept 问：</p>
+<blockquote class="blockquote">
+<p><strong>它能做什么？</strong></p>
+</blockquote>
+<p>例如：</p>
+<pre class="text"><code>Model
+├─ train
+├─ fine-tune
+├─ quantize
+├─ load
+├─ serve
+└─ route</code></pre>
+<hr>
+</section>
+<section id="relation-map" class="level2">
+<h2 class="anchored" data-anchor-id="relation-map">③ Relation Map</h2>
+<p>问：</p>
+<blockquote class="blockquote">
+<p><strong>哪些关系会影响实际判断？</strong></p>
+</blockquote>
+<p>只记录重要关系。</p>
+<p>例如：</p>
+<pre class="text"><code>Batch Size
+   ↓
+Throughput ↑
+
+Batch Size
+   ↓
+Latency may ↑</code></pre>
+<hr>
+</section>
+<section id="judgment-map" class="level2">
+<h2 class="anchored" data-anchor-id="judgment-map">④ Judgment Map</h2>
+<p>问：</p>
+<blockquote class="blockquote">
+<p><strong>什么时候用？</strong></p>
+<p><strong>有什么代价？</strong></p>
+<p><strong>怎么判断好坏？</strong></p>
+</blockquote>
+<p>这样，一个领域就从“知识列表”变成了：</p>
+<blockquote class="blockquote">
+<p><strong>可调用的能力地图。</strong></p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="最小知识单元" class="level1">
+<h1>12. 最小知识单元</h1>
+<p>以后遇到一个重要概念，可以只记录下面这些：</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>字段</th>
+<th>问题</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Concept</strong></td>
+<td>它是什么？</td>
+</tr>
+<tr class="even">
+<td><strong>Purpose</strong></td>
+<td>它解决什么问题？</td>
+</tr>
+<tr class="odd">
+<td><strong>Operations</strong></td>
+<td>可以对它做什么？</td>
+</tr>
+<tr class="even">
+<td><strong>Relations</strong></td>
+<td>它和哪些关键概念相关？</td>
+</tr>
+<tr class="odd">
+<td><strong>When / Limits</strong></td>
+<td>什么时候用？什么时候不适合？</td>
+</tr>
+<tr class="even">
+<td><strong>Evaluation</strong></td>
+<td>怎样判断效果？</td>
+</tr>
+</tbody>
+</table>
+<p>例如：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>字段</th>
+<th>RAG</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Concept</strong></td>
+<td>Retrieval-Augmented Generation</td>
+</tr>
+<tr class="even">
+<td><strong>Purpose</strong></td>
+<td>给模型动态补充外部知识</td>
+</tr>
+<tr class="odd">
+<td><strong>Operations</strong></td>
+<td>index, retrieve, filter, rerank, inject</td>
+</tr>
+<tr class="even">
+<td><strong>Relations</strong></td>
+<td>document、chunk、embedding、context、LLM</td>
+</tr>
+<tr class="odd">
+<td><strong>When / Limits</strong></td>
+<td>适合知识缺失；不直接等同于提升模型自身能力</td>
+</tr>
+<tr class="even">
+<td><strong>Evaluation</strong></td>
+<td>retrieval quality、answer correctness、citation quality</td>
+</tr>
+</tbody>
+</table>
+<p>这个模板足以支持长期积累。</p>
+<hr>
+</section>
+<section id="为什么这是一种能力" class="level1">
+<h1>13. 为什么这是一种“能力”</h1>
+<p>因为拥有更多代码，不一定意味着拥有更大的解决空间。</p>
+<p>真正重要的是：</p>
+<blockquote class="blockquote">
+<p><strong>面对问题时，你能想到多少可用杠杆。</strong></p>
+</blockquote>
+<p>如果一个人知道：</p>
+<ul>
+<li>Context 可以压缩</li>
+<li>Retrieval 可以 rerank</li>
+<li>Model 可以 quantize</li>
+<li>Request 可以 batch</li>
+<li>Workflow 可以显式控制</li>
+<li>Output 可以自动 Verify</li>
+</ul>
+<p>那么他看到一个 AI 系统的问题时，会自然产生多个可能方向。</p>
+<p>另一个人如果不知道这些概念存在，就看不到这些路径。</p>
+<p>因此：</p>
+<blockquote class="blockquote">
+<p><strong>概念扩大可见空间，操作提供可行动杠杆。</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="能力地图" class="level1">
+<h1>14. 能力地图</h1>
+<p>可以把一个人的领域能力粗略理解为：</p>
+<blockquote class="blockquote">
+<p><strong>Capability Map</strong></p>
+<p>=</p>
+<p><strong>Concept Map</strong></p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Operation Map</strong></p>
+<ul>
+<li></li>
+</ul>
+<p><strong>关键 Relations</strong></p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Judgment</strong></p>
+</blockquote>
+<p>其中最核心的仍然是：</p>
+</section>
+<section id="concept-operation" class="level1">
+<h1><strong>Concept + Operation</strong></h1>
+<p>即：</p>
+<blockquote class="blockquote">
+<p><strong>有什么？</strong></p>
+<p><strong>能做什么？</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="最终内化版本" class="level1">
+<h1>15. 最终内化版本</h1>
+<p>学习任何领域时，优先问四个问题：</p>
+<blockquote class="blockquote">
+<p><strong>1. 有什么？</strong></p>
+<p>Concept</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>2. 能做什么？</strong></p>
+<p>Operation</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>3. 怎么关联？</strong></p>
+<p>Relation</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>4. 什么时候用，什么叫好？</strong></p>
+<p>Judgment</p>
+</blockquote>
+<p>其中真正需要形成条件反射的是前两个：</p>
+</section>
+<section id="concept-operation-1" class="level1">
+<h1><strong>Concept — Operation</strong></h1>
+</section>
+<section id="概念-操作" class="level1">
+<h1><strong>概念 — 操作</strong></h1>
+<hr>
+</section>
+<section id="一句话总纲" class="level1">
+<h1>16. 一句话总纲</h1>
+<blockquote class="blockquote">
+<p><strong>大模型时代，学习一个领域的核心，是建立它的概念地图和操作地图：知道有什么，知道能做什么；再理解关键关系和判断标准。具体实现细节则越来越适合按需获取。</strong></p>
+</blockquote>
+<p>可以进一步压缩成：</p>
+</section>
+<section id="概念是能力的地址操作是能力的杠杆" class="level1">
+<h1><strong>概念是能力的地址，操作是能力的杠杆。</strong></h1>
+<p>最终目标不是记住越来越多代码，而是在脑中形成一张越来越清晰的：</p>
+</section>
+<section id="capability-map" class="level1">
+<h1><strong>Capability Map</strong></h1>
+</section>
+<section id="能力地图-1" class="level1">
+<h1><strong>能力地图</strong></h1>
+
+
+</section>
+
+ ]]></description>
+  <category>学习</category>
+  <category>思维</category>
+  <category>LLM</category>
+  <guid>https://liamamilin.github.io/IBlogs/posts/concept-operation-capability/</guid>
+  <pubDate>Tue, 08 Sep 2026 16:00:00 GMT</pubDate>
+</item>
 <item>
   <title>学习构造论——面向个人学习的完整工程体系</title>
   <dc:creator>Lin </dc:creator>
