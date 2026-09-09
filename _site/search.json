@@ -3903,7 +3903,7 @@
     "href": "posts/concept-operation-capability/index.html",
     "title": "Concept–Operation Capability：概念—操作能力",
     "section": "",
-    "text": "大模型时代，学习一个领域时，最值得长期掌握的，不再首先是大量具体语法、API 和实现细节，而是：\n\n这个领域有哪些关键概念，以及围绕这些概念可以进行哪些操作。\n\n这就是："
+    "text": "大模型时代，学习一个领域时，最值得长期掌握的，不再首先是大量具体语法、API 和实现细节，而是："
   },
   {
     "objectID": "posts/concept-operation-capability/index.html#level-1name",
@@ -3938,28 +3938,28 @@
     "href": "posts/concept-operation-capability/index.html#实现知识",
     "title": "Concept–Operation Capability：概念—操作能力",
     "section": "实现知识",
-    "text": "实现知识\n例如：\n\n函数名\n参数名\nAPI 调用格式\n配置语法\nboilerplate\n\n这些知识通常：\n\n变化快，\n容易查，\n容易由 AI 生成。"
+    "text": "实现知识\n例如：\n\n函数名\n参数名\nAPI 格式\n配置语法\nboilerplate\n\n这类知识：\n\n变化快\n容易查询\n容易由 AI 生成"
   },
   {
     "objectID": "posts/concept-operation-capability/index.html#概念操作知识",
     "href": "posts/concept-operation-capability/index.html#概念操作知识",
     "title": "Concept–Operation Capability：概念—操作能力",
     "section": "概念—操作知识",
-    "text": "概念—操作知识\n例如：\n\ninference 可以 batching。 model 可以 quantize。 request 可以 route。 cache 可以 reuse。 retrieval 可以 rerank。\n\n这些知识决定：\n\n你是否知道有哪些解决办法。\n\n所以大模型时代更合理的策略是：\n\n长期内化概念与操作，按需获取实现细节。"
+    "text": "概念—操作知识\n例如：\n\nModel 可以 quantize。 Request 可以 batch。 Retrieval 可以 rerank。 Cache 可以 reuse。 Workflow 可以显式控制。\n\n这些知识决定：\n\n你能不能看见解决办法。\n\n因此，大模型时代更合理的学习策略是："
   },
   {
     "objectID": "posts/concept-operation-capability/index.html#concept-map",
     "href": "posts/concept-operation-capability/index.html#concept-map",
     "title": "Concept–Operation Capability：概念—操作能力",
-    "section": "① Concept Map",
-    "text": "① Concept Map\n\n有哪些关键概念？\n\n要求：\n\n少而重要\n先抓主干\n不追求一次完整"
+    "section": "Concept Map",
+    "text": "Concept Map\n问：\n\n这个领域有什么？\n\n先抓主干。\n不要一次追求全部细节。"
   },
   {
     "objectID": "posts/concept-operation-capability/index.html#operation-map",
     "href": "posts/concept-operation-capability/index.html#operation-map",
     "title": "Concept–Operation Capability：概念—操作能力",
-    "section": "② Operation Map",
-    "text": "② Operation Map\n对每个 Concept 问：\n\n它能做什么？\n\n例如：\nModel\n├─ train\n├─ fine-tune\n├─ quantize\n├─ load\n├─ serve\n└─ route"
+    "section": "Operation Map",
+    "text": "Operation Map\n对每个 Concept 问：\n\n它能做什么？\n\n例如：\nModel\n├─ train\n├─ fine-tune\n├─ quantize\n├─ load\n├─ serve\n└─ route\n然后需要时，再逐步增加：\n\nRelation\nJudgment\n更高分辨率的子 Concept\n更精细的子 Operation\n\n也就是说：\n\n地图先建立，精度逐步提高。"
   },
   {
     "objectID": "posts/concept-operation-capability/index.html#relation-map",
@@ -4058,5 +4058,89 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "posts/concept-operation-capability/index.html#一个领域可以被近似表示为-concepts-operations",
+    "href": "posts/concept-operation-capability/index.html#一个领域可以被近似表示为-concepts-operations",
+    "title": "Concept–Operation Capability：概念—操作能力",
+    "section": "一个领域，可以被近似表示为 Concepts + Operations。",
+    "text": "一个领域，可以被近似表示为 Concepts + Operations。\nConcept 回答：\n\n有什么？\n\nOperation 回答：\n\n能做什么？\n\n复杂知识通常只是这两者的组合、递归与细化。\n例如：\nModel\n├─ load\n├─ train\n├─ fine-tune\n├─ quantize\n├─ serve\n└─ route\n这里：\n\nModel 是 Concept\nquantize、serve、route 是 Operations"
+  },
+  {
+    "objectID": "posts/concept-operation-capability/index.html#concept-operation-已经具有很强的生成完备性",
+    "href": "posts/concept-operation-capability/index.html#concept-operation-已经具有很强的生成完备性",
+    "title": "Concept–Operation Capability：概念—操作能力",
+    "section": "Concept + Operation 已经具有很强的生成完备性。",
+    "text": "Concept + Operation 已经具有很强的生成完备性。\n这里的“完备”不是数学意义上的形式证明，而是：\n\n大量领域知识都可以从这两个基本维度继续生长出来。"
+  },
+  {
+    "objectID": "posts/concept-operation-capability/index.html#concept-是否足够精确",
+    "href": "posts/concept-operation-capability/index.html#concept-是否足够精确",
+    "title": "Concept–Operation Capability：概念—操作能力",
+    "section": "Concept 是否足够精确？",
+    "text": "Concept 是否足够精确？"
+  },
+  {
+    "objectID": "posts/concept-operation-capability/index.html#operation-是否足够精确",
+    "href": "posts/concept-operation-capability/index.html#operation-是否足够精确",
+    "title": "Concept–Operation Capability：概念—操作能力",
+    "section": "Operation 是否足够精确？",
+    "text": "Operation 是否足够精确？\n也就是：\n\n分辨率够不够高。"
+  },
+  {
+    "objectID": "posts/concept-operation-capability/index.html#这个领域里有哪些重要对象机制结构和状态",
+    "href": "posts/concept-operation-capability/index.html#这个领域里有哪些重要对象机制结构和状态",
+    "title": "Concept–Operation Capability：概念—操作能力",
+    "section": "这个领域里有哪些重要对象、机制、结构和状态？",
+    "text": "这个领域里有哪些重要对象、机制、结构和状态？\n例如 LLM Serving：\n\nModel\nWeights\nToken\nRequest\nKV Cache\nBatch\nQuantization\nRouter\nLatency\nThroughput\n\nConcept 的作用是：\n\n给能力建立地址。\n\n不知道某个 Concept 存在，通常也就难以主动调用围绕它的能力。\n所以："
+  },
+  {
+    "objectID": "posts/concept-operation-capability/index.html#围绕这个-concept可以进行哪些操作",
+    "href": "posts/concept-operation-capability/index.html#围绕这个-concept可以进行哪些操作",
+    "title": "Concept–Operation Capability：概念—操作能力",
+    "section": "围绕这个 Concept，可以进行哪些操作？",
+    "text": "围绕这个 Concept，可以进行哪些操作？\n例如：\n\nModel\n\nload\nfine-tune\nquantize\nshard\nserve\nroute\n\n\n\nRequest\n\nqueue\nbatch\nroute\nprioritize\ncache\n\n\n\nKV Cache\n\nallocate\nreuse\nevict\nmanage\ncompress\n\nOperation 的作用是：\n\n告诉你哪里可以动。\n\n所以："
+  },
+  {
+    "objectID": "posts/concept-operation-capability/index.html#concept-operation",
+    "href": "posts/concept-operation-capability/index.html#concept-operation",
+    "title": "Concept–Operation Capability：概念—操作能力",
+    "section": "Concept × Operation",
+    "text": "Concept × Operation\n例如数据可视化：\n\n\n\nConcept\nOperations\n\n\n\n\nData\nfilter, aggregate, transform, reorder\n\n\nGeometry\nchoose, add, replace\n\n\nAxis\nset range, transform, label, format\n\n\nColor\nmap, set, scale, highlight\n\n\nGrid\nshow, hide, weaken\n\n\nLegend\nmove, rename, reorder, hide\n\n\nLabel\nadd, position, format\n\n\nTheme\nsimplify, customize, standardize\n\n\n\n当一张图不好时，你不需要首先想：\n\n某个具体函数名是什么？\n\n而是先想到：\n\nAxis 可以调整。 Color 可以调整。 Grid 可以调整。 Label 可以调整。 Theme 可以调整。\n\n然后让 AI 完成具体实现。\n这就是概念—操作能力。"
+  },
+  {
+    "objectID": "posts/concept-operation-capability/index.html#relation",
+    "href": "posts/concept-operation-capability/index.html#relation",
+    "title": "Concept–Operation Capability：概念—操作能力",
+    "section": "Relation",
+    "text": "Relation\n\n这个 Concept 和其他 Concept 怎么关联？\n\n例如：\nContext Length\n      ↓\nKV Cache Usage\n      ↓\nGPU Memory\n      ↓\nConcurrency\nRelation 让孤立 Concept 形成系统。"
+  },
+  {
+    "objectID": "posts/concept-operation-capability/index.html#judgment",
+    "href": "posts/concept-operation-capability/index.html#judgment",
+    "title": "Concept–Operation Capability：概念—操作能力",
+    "section": "Judgment",
+    "text": "Judgment\n\n什么时候使用这个 Operation？\n有什么代价？\n怎么判断结果好不好？\n\n例如 Quantization：\n\n能降低显存占用。\n\n还需要知道：\n\n什么时候值得量化？ 质量损失多少？ 是否提高吞吐？ 延迟有没有变化？\n\n所以：\n\nConcept + Operation 是骨架。\nRelation + Judgment 让骨架真正可用。"
+  },
+  {
+    "objectID": "posts/concept-operation-capability/index.html#expertise-conceptoperation-map-的广度精度和正确性",
+    "href": "posts/concept-operation-capability/index.html#expertise-conceptoperation-map-的广度精度和正确性",
+    "title": "Concept–Operation Capability：概念—操作能力",
+    "section": "Expertise ≈ Concept–Operation Map 的广度、精度和正确性。",
+    "text": "Expertise ≈ Concept–Operation Map 的广度、精度和正确性。"
+  },
+  {
+    "objectID": "posts/concept-operation-capability/index.html#concept-map-operation-map",
+    "href": "posts/concept-operation-capability/index.html#concept-map-operation-map",
+    "title": "Concept–Operation Capability：概念—操作能力",
+    "section": "Concept Map + Operation Map",
+    "text": "Concept Map + Operation Map\n然后不断提高：\n\nConcept precision\nOperation precision\nRelation understanding\nJudgment quality\n\n所以能力建设不是无限增加知识点。\n而是：\n\n不断提高能力地图的覆盖率和分辨率。"
+  },
+  {
+    "objectID": "posts/concept-operation-capability/index.html#一个领域的可操作知识可以近似理解为-concept-operation学习的核心是不断发现和澄清-concept发现和理解-operation并持续提高二者的精度与分辨率",
+    "href": "posts/concept-operation-capability/index.html#一个领域的可操作知识可以近似理解为-concept-operation学习的核心是不断发现和澄清-concept发现和理解-operation并持续提高二者的精度与分辨率",
+    "title": "Concept–Operation Capability：概念—操作能力",
+    "section": "一个领域的可操作知识，可以近似理解为 Concept + Operation；学习的核心，是不断发现和澄清 Concept，发现和理解 Operation，并持续提高二者的精度与分辨率。",
+    "text": "一个领域的可操作知识，可以近似理解为 Concept + Operation；学习的核心，是不断发现和澄清 Concept，发现和理解 Operation，并持续提高二者的精度与分辨率。\n最终压缩成两句话："
   }
 ]

@@ -6,4 +6,5 @@ MSG="${1:-$(date +'%Y-%m-%d %H:%M')}"
 git add -A
 git commit -m "$MSG"
 git push
-quarto publish gh-pages
+QUARTO="/Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto"
+$QUARTO publish gh-pages
