@@ -186,10 +186,10 @@ quarto publish gh-pages
 
 ## 六、常用命令速查
 
-| 命令                                           | 作用                 |
-|------------------------------------------------|----------------------|
-| `quarto render`                                | 渲染整个网站/书籍    |
-| `quarto preview`                               | 本地预览（自动刷新） |
-| `quarto publish gh-pages`                      | 发布到 GitHub Pages  |
-| `git add . && git commit -m "msg" && git push` | 保存源码到 GitHub    |
-| `./deploy.sh`                                   | 一键提交 + 推送 + 部署 |
+| 命令                                           | 作用                   |
+|------------------------------------------------|------------------------|
+| `quarto render`                                | 渲染整个网站/书籍      |
+| `quarto preview`                               | 本地预览（自动刷新）   |
+| `quarto publish gh-pages`                      | 发布到 GitHub Pages    |
+| `git add . && git commit -m "msg" && git push` | 保存源码到 GitHub      |
+| `./deploy.sh`                                  | 一键提交 + 推送 + 部署 |
